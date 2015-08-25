@@ -26,6 +26,15 @@ def db(request):
 
     return render(request, 'db.html', {'greetings': greetings})
 
-def test(request):
-    return render(request, 'test.html')
+def how_we_met(request):
+    return render(request, 'how-we-met.html')
+
+def wedding_party(request):
+    return render(request, 'wedding-party.html')
+
+def the_big_day(request):
+    return render(request, 'the-big-day.html')
+
+def where_to_stay(request):
+    return render(request, 'where-to-stay.html')
 

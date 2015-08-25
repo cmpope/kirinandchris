@@ -13,6 +13,9 @@ urlpatterns = patterns('',
     url(r'^$', hello.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^test', hello.views.test, name='test')
+    url(r'^how-we-met', hello.views.how_we_met, name='how-we-met'),
+    url(r'^wedding-party', hello.views.wedding_party, name='wedding-party'),
+    url(r'^the-big-day', hello.views.the_big_day, name='the-big-day'),
+    url(r'^where-to-stay', hello.views.where_to_stay, name='where-to-stay')
 
 )
