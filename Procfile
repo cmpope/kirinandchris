@@ -1,0 +1,1 @@
+web: gunicorn kirinandchris:app --log-file=-
