@@ -27,6 +27,11 @@ def index():
                            current_time=datetime.utcnow())
 
 
+@app.route('/how-we-met.html')
+def how_we_met():
+    return render_template('how-we-met.html')
+
+
 @app.route('/user/<name>')
 def user(name):
     return render_template('user.html', name=name)
