@@ -31,6 +31,14 @@ def index():
 def how_we_met():
     return render_template('how-we-met.html')
 
+@app.route('/the-wedding-party')
+def the_wedding_party():
+    return render_template('the-wedding-party.html')
+
+@app.route('/the-big-day')
+def the_big_day():
+    return render_template('the-big-day.html')
+
 
 @app.route('/user/<name>')
 def user(name):
