@@ -27,9 +27,9 @@ def index():
                            current_time=datetime.utcnow())
 
 
-@app.route('/how-we-met.html')
-def how_we_met():
-    return render_template('how-we-met.html')
+@app.route('/about-us')
+def about_us():
+    return render_template('about-us.html')
 
 @app.route('/the-wedding-party')
 def the_wedding_party():
