@@ -39,6 +39,14 @@ def the_wedding_party():
 def the_big_day():
     return render_template('the-big-day.html')
 
+@app.route('/memories')
+def memories():
+    return render_template('memories.html')
+
+@app.route('/registry')
+def registry():
+    return render_template('registry.html')
+
 
 @app.route('/user/<name>')
 def user(name):
