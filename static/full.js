@@ -2,7 +2,7 @@ $(document).ready(function(){
   
   console.log('jquery is ready!');
 
-  var callTimer = setInterval(function(){rotatePics()}, 4500);
+  var callTimer = setInterval(function(){rotatePics()}, 5000);
 
   var theCount = 0;
 

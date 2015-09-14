@@ -25,16 +25,16 @@
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+                <img class="img-responsive" style="width: 750px;" src="static/sierra-nevada-brewery.JPG" alt="">
             </div>
 
             <div class="col-md-4">
-                <h3>Project Description</h3>
+                <h3>Tasting Beer</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                <h3>Project Details</h3>
+                <h3>Brewery Visits</h3>
                 <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
+                    <li>Russian River - 6/12</li>
+                    <li>Sierra Nevada - 7/13</li>
                     <li>Consectetur</li>
                     <li>Adipiscing Elit</li>
                 </ul>
@@ -50,27 +50,27 @@
                 <h3 class="page-header">Related Projects</h3>
             </div>
 
-            <div class="col-sm-3 col-xs-6">
+            <div id="tasting-beer" class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    <img class="img-responsive portfolio-item" src="static/sierra-nevada-brewery.JPG" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    <img class="img-responsive portfolio-item" src="static/49er-game.JPG" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    <img class="img-responsive portfolio-item" src="static/hawaii-pls-2013.JPG" alt="">
                 </a>
             </div>
 
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                    <img class="img-responsive portfolio-item" src="static/kirin-chris-jenny-wedding.jpg" alt="">
                 </a>
             </div>
 
@@ -92,4 +92,8 @@
     </div>
     <!-- /.container -->
 
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="static/portfolio-item.js"></script>
 {% endblock %}
