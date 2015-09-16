@@ -9,9 +9,10 @@
     <meta name="description" content="Kirin Mysorewala and Chris Pope's wedding website">
     <meta name="author" content="Chris Pope">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-{% block head %}
     <link rel="shortcut icon" href="{{ url_for('static', filename='kirinandchris-favicon.png') }}" type="image/png">
-    <link rel="icon" href="static/kirinandchris-favicon.png" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='kirinandchris-favicon.png') }}" type="image/png">
+{% block head %}
+
 {% endblock %}
 </head>
 
