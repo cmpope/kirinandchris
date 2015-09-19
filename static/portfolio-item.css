@@ -19,3 +19,37 @@ footer {
 .description {
   margin-top: 35px;
 }
+
+.highlight-image > img {
+  margin: auto;
+  width: 750px;
+}
+
+h5.portfolio-item {
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+
+.portfolio-item{
+  opacity: .75;
+
+}
+
+.portfolio-item:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.highlight-thumbs {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.highlight-thumbs > img {
+  width: 100px;
+  cursor: pointer;
+}
+
+
