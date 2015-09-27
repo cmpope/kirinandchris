@@ -1,234 +1,192 @@
 $(document).ready(function() {
 
-  var Memories = {
-    "tastingBeer" : {
-      "summary" : "lorem ipsum",
-      "content" : {
-          "sierraNevadaBrewery" : {
-            "image" : {
-              "source" : "static/sierra-nevada-brewery.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-sierra-nevada-brewery"
-            },
-            "description" : {
-              "name" : "Sierra Nevada Brewing Company",
-              "date" : "February 16, 2013 | Chico, CA"
-            }
-          },
-          "bearRepublicBrewery" : {
-            "image" : {
-              "src" : "static/bear-republic-brewery-hd.jpg",
-              "alt" : "kirin-mysorewala-chris-pope-bear-republic-brewery"
-            },
-            "description" : {
-              "name" : "Bear Republic Brewing Company",
-              "date" : "August 18, 2013 | Healdsberg, CA"
-            } 
-          },
-          "firestoneWalkerBrewery" : {
-            "image" : {
-              "source" : "static/firestone-walker-brewery-hd.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-firestone-walker-brewery"
-            },
-            "description" : {
-              "name" : "Firestone Walker Brewing Company",
-              "date" : "July 28, 2013 | San Louis Obispo, CA"
-            }
-          }
+  var Memories = [
+
+    //***TASTING BEER***
+    [
+      {
+        "meta" : {
+          "title" : "Tasting Beer",
+          "description" : "Kirin and Chris share a passion for great beer. Visiting breweries is one of their favorite things to do together. Some of their California favorites include Alesmith, Sierra Nevada, Russian River and Firestone Walker."
         }
       },
+      {
+        "content" :
+          [       
+              {
+                "title" : "Sierra Nevada Brewing Company",
+                "image" : "static/sierra-nevada-brewery.JPG",
+                "alt" : "kirin-mysorewala-chris-pope-sierra-nevada-brewery",
+                "date" : "February 16, 2013 | Chico, CA"
+              },
+              {
+                "title" : "Bear Republic Brewing Company",
+                "image" : "static/bear-republic-brewery-hd.jpg",
+                "alt" : "kirin-mysorewala-chris-pope-bear-republic-brewery",
+                "date" : "August 18, 2013 | Healdsberg, CA"          
+              },
+              {
+                "title" : "Firestone Walker Brewing Company",
+                "image" : "static/firestone-walker-brewery-hd.JPG",
+                "alt" : "kirin-mysorewala-chris-pope-firestone-walker-brewery",
+                "date" : "July 28, 2013 | Paso Robles, CA"
+              }
+          ]
+        }
+    ],
 
-    "sportingEvents" : {
-      "summary" : "lorem ipsum",
-      "content" : {
-          "ninerGame" : {
-            "image" : {
-              "source" : "static/49er-game-hd.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-49er-game"
-            },
-            "description" : {
-              "name" : "Final Game at Candlestick Park",
+    //***SPORTING EVENTS***
+    [
+      {
+        "meta" : {
+          "title" : "Sporting Events",
+          "description" : "We love sportingEvents ya bish"
+        }
+      },
+      {
+        "content" : 
+          [
+            {
+              "title" : "Final 49ers Game at Candlestick Park",
+              "image" : "static/49er-game-hd.JPG",
+              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-49er-game",
               "date" : "February 16, 1900 | San Francisco, CA"
+            },
+            {
+              "title" : "Giants Spring Training",
+              "image" : "static/giants-spring-training-hd.JPG",
+              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-giants-spring-training",
+              "date" : "February 16, 1900 | Scottsdale, AZ"
+            },
+            {
+              "title" : "Sharks Stadium Series Game vs LA Kings",
+              "image" : "static/sharks-stadium-series-hd.JPG",
+              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-giants-spring-training",
+              "date" : "February 16, 1900 | Santa Clara, CA"
             }
-          },
-          "giantsSpringTraining" : {
-            "image" : {
-              "source" : "static/giants-spring-training-hd.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-giants-spring-training"
-            },
-            "description" : {
-              "name" : "Giants Spring Training",
-              "date" : "August 18, 1900 | Phoenix, AZ"
-            } 
-          },
-          "sharksStadiumSeries" : {
-            "image" : {
-              "source" : "static/sharks-stadium-series-hd.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-sharks-stadium-series"
-            },
-            "description" : {
-              "name" : "San Jose Sharks Stadium Series Game vs. LA Kings",
-              "date" : "July 28, 1900 | Santa Clara, CA"
-            }
-          }
-        }
-      },
-
-    "vacations" : {
-      "summary" : "lorem ipsum",
-      "content" : {
-          "hawaii" : {
-            "image" : {
-              "source" : "hawaii-pls-2013.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-hawaii"
-            },
-            "description" : {
-              "name" : "Hawaii with Marketo - Purple Label Society",
-              "date" : "February 16, 1900 | Hululailai, HI"
-            }
-          },
-          "giants-spring-training" : {
-            "image" : {
-              "source" : "giants-spring-training-hd.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-giants-spring-training"
-            },
-            "description" : {
-              "name" : "Giants Spring Training",
-              "date" : "August 18, 1900 | Phoenix, AZ"
-            } 
-          },
-          "sharks-stadium-series" : {
-            "image" : {
-              "source" : "sharks-stadium-series-hd.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-sharks-stadium-series"
-            },
-            "description" : {
-              "name" : "San Jose Sharks Stadium Series Game vs. LA Kings",
-              "date" : "July 28, 1900 | Santa Clara, CA"
-            }
-          }
-        }
-      },
-
-    "weddings" : {
-      "summary" : "lorem ipsum",
-      "conent" : {
-          "jenny-jamal" : {
-            "image" : {
-              "source" : "kirin-chris-jenny-wedding-hd.jpg",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-jenny-jamal-wedding"
-            },
-            "description" : {
-              "name" : "",
-              "date" : "February 16, 1900 | Hululailai, HI"
-            }
-          },
-          "giants-spring-training" : {
-            "image" : {
-              "source" : "giants-spring-training-hd.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-giants-spring-training"
-            },
-            "description" : {
-              "name" : "Giants Spring Training",
-              "date" : "August 18, 1900 | Phoenix, AZ"
-            } 
-          },
-          "sharks-stadium-series" : {
-            "image" : {
-              "source" : "sharks-stadium-series-hd.JPG",
-              "alt" : "kirin-mysorewala-chris-pope-wedding-memories-sharks-stadium-series"
-            },
-            "description" : {
-              "name" : "San Jose Sharks Stadium Series Game vs. LA Kings",
-              "date" : "July 28, 1900 | Santa Clara, CA"
-            }
-          }
-        }
+          ]
       }
+    ],
+
+    [
+      {
+        "meta" : {
+          "title" : "Vacations",
+          "description" : "We love vacations ya bish"
+        }
+      },
+      {
+        "content" :
+        [
+          {
+            "title" : "Hawaii with Marketo - Purple Label Society",
+            "image" : "static/hawaii-pls-2013.JPG",
+            "alt" : "kirin-mysorewala-chris-pope-wedding-memories-hawaii",
+            "date" : "February 16, 1900 | Hululailai, HI"
+          },
+          {
+            "title" : "Hawaii with Marketo - Purple Label Society",
+            "image" : "static/hawaii-pls-2013.JPG",
+            "alt" : "kirin-mysorewala-chris-pope-wedding-memories-hawaii",
+            "date" : "February 16, 1900 | Hululailai, HI"
+          },
+          {
+            "title" : "Hawaii with Marketo - Purple Label Society",
+            "image" : "static/hawaii-pls-2013.JPG",
+            "alt" : "kirin-mysorewala-chris-pope-wedding-memories-hawaii",
+            "date" : "February 16, 1900 | Hululailai, HI"
+          }
+        ]
+      }
+    ],
+
+    //***WEDDINGS***
+    [
+      {
+        "meta" : {
+          "title" : "Weddings",
+          "description" : "We love weddings ya bish"
+        }
+      },
+      {
+        "content" :
+        [
+          {
+            "title" : "Jenny and Barry Kelly Wedding",
+            "image" : "static/kirin-chris-jenny-wedding-hd.JPG",
+            "alt" : "kirin-mysorewala-chris-pope-wedding-memories-jenny-barry-kelly-wedding",
+            "date" : "February 16, 1900 | Berkeley, CA"
+          },
+           {
+            "title" : "Jenny and Barry Kelly Wedding",
+            "image" : "static/kirin-chris-jenny-wedding-hd.JPG",
+            "alt" : "kirin-mysorewala-chris-pope-wedding-memories-jenny-barry-kelly-wedding",
+            "date" : "February 16, 1900 | Berkeley, CA"
+          },
+          {
+            "title" : "Jenny and Barry Kelly Wedding",
+            "image" : "static/kirin-chris-jenny-wedding-hd.JPG",
+            "alt" : "kirin-mysorewala-chris-pope-wedding-memories-jenny-barry-kelly-wedding",
+            "date" : "February 16, 1900 | Berkeley, CA"
+          }
+        ]
+      }
+    ]
+  ]
+
+
+  function updateHighlight(name) {
+    console.log(name);
+    $('#highlight-image').attr('src', Memories[name][1]['content'][0].image);
+    $('.highlight-thumbs img:nth-child(1)').attr('src', Memories[name][1]['content'][0].image);
+    $('.highlight-thumbs img:nth-child(2)').attr('src', Memories[name][1]['content'][1].image);
+    $('.highlight-thumbs img:nth-child(3)').attr('src', Memories[name][1]['content'][2].image);
+    $('.col-md-4 h3:first-child').html(Memories[name][0]['meta'].title);
+    $('.col-md-4 p').html(Memories[name][0]['meta'].description);
+    $('#first-description').html(Memories[name][1]['content'][0].title);
+    $('#second-description').html(Memories[name][1]['content'][0].date);
+    console.log(Memories[name][0]['meta'].description);
+
+/*
+    var myTimer = setInterval(rotateImage(name), 5000);
+
+    var i = 1;
+
+    function rotateImage(name) {  
+      console.log(i);
+      if (i == 0) {
+        $('#highlight-image').attr('src', Memories[name][1]['content'][0].image);
+        i += 1;
+      } else if (i == 1) {
+        $('#highlight-image').attr('src', Memories[name][1]['content'][1].image);
+        i += 1;
+      } else {
+        $('#highlight-image').attr('src', Memories[name][1]['content'][2].image);
+        i -= 2;
+      }
+    }
+*/
+
+    $('.highlight-thumbs img').click(function(){
+      var item = $('.highlight-thumbs img').index(this);
+      console.log(item);
+      $('#highlight-image').attr('src', Memories[name][1]['content'][item].image);
+      $('.highlight-thumbs img:focus').attr('background-color', "#00");
+    });
+
 
   };
 
-  $('#tastingBeer').click(function(){
-    $('#highlight-image').attr('src', Memories.tastingBeer.content.sierraNevadaBrewery.image.source);
-    $('.highlight-thumbs img:nth-child(1)').attr('src', Memories.tastingBeer.content.sierraNevadaBrewery.image.source);
-    $('.highlight-thumbs img:nth-child(1)').css('background-color', '#000');
-    $('.highlight-thumbs img:nth-child(2)').attr('src', Memories.tastingBeer.content.bearRepublicBrewery.image.source);
-    $('.highlight-thumbs img:nth-child(3)').attr('src', Memories.tastingBeer.content.firestoneWalkerBrewery.image.source);
 
-    var callTimer = setInterval(function(){rotatePics()}, 4500);
-
-    $('#sportingEvents, #vacations, weddings').click(function(){clearInterval(callTimer)});
-
-    var theCount = 1;
-
-    function rotatePics() {
-      if (theCount == 0) {
-        $('.highlight-thumbs img:nth-child(1)').click(function(){clearInterval(callTimer)});
-        $('#highlight-image').attr('src', Memories.tastingBeer.content.sierraNevadaBrewery.image.source);
-        $('.highlight-thumbs img:nth-child(3)').css('background-color', '#fff');
-        $('.highlight-thumbs img:nth-child(1)').css('background-color', '#000');
-        theCount += 1;
-
-      } else if (theCount == 1) {
-        $('.highlight-thumbs img:nth-child(2)').click(function(){clearInterval(callTimer)});
-        $('#highlight-image').attr('src', Memories.tastingBeer.content.bearRepublicBrewery.image.source);
-        console.log($('#highlight-image'));
-        $('.highlight-thumbs img:nth-child(1)').css('background-color', '#fff');
-        $('.highlight-thumbs img:nth-child(2)').css('background-color', '#000');
-        theCount += 1;
-      } else {
-        $('.highlight-thumbs img:nth-child(3)').click(function(){clearInterval(callTimer)});
-        $('#highlight-image').attr('src', Memories.tastingBeer.content.firestoneWalkerBrewery.image.source);
-        $('.highlight-thumbs img:nth-child(2)').css('background-color', '#fff');
-        $('.highlight-thumbs img:nth-child(3)').css('background-color', '#000');
-        //$('#image-description').html(Memories.tasingBeer.description[theCount]);
-        theCount -= 2;
-      }
-    }
+  $('.col-sm-3').click(function(){
+    var name = $('.col-sm-3').index(this);
+    updateHighlight(name);
   });
 
-  $('#sportingEvents').click(function(){
-    $('#highlight-image').attr('src', Memories.sportingEvents.content.ninerGame.image.source);
-    $('.highlight-thumbs img:nth-child(1)').attr('src', Memories.sportingEvents.content.ninerGame.image.source);
-    $('.highlight-thumbs img:nth-child(1)').css('background-color', '#000');
-    $('.highlight-thumbs img:nth-child(2)').attr('src', Memories.sportingEvents.content.giantsSpringTraining.image.source);
-    $('.highlight-thumbs img:nth-child(3)').attr('src', Memories.sportingEvents.content.sharksStadiumSeries.image.source);
-
-    var callTimer = setInterval(function(){rotatePics()}, 4500);
-
-    $('#tastingBeer, #vacations, weddings').click(function(){clearInterval(callTimer)});
-
-    var theCount = 1;
-
-    function rotatePics() {
-      if (theCount == 0) {
-        $('#highlight-image').attr('src', Memories.sportingEvents.content.ninerGame.image.source);
-        $('.highlight-thumbs img:nth-child(3)').css('background-color', '#fff');
-        $('.highlight-thumbs img:nth-child(1)').css('background-color', '#000');
-        theCount += 1;
-
-      } else if (theCount == 1) {
-        $('#highlight-image').attr('src', Memories.sportingEvents.content.giantsSpringTraining.image.source);
-        $('.highlight-thumbs img:nth-child(1)').css('background-color', '#fff');
-        $('.highlight-thumbs img:nth-child(2)').css('background-color', '#000');
-        theCount += 1;
-      } else {
-        $('#highlight-image').attr('src', Memories.sportingEvents.content.sharksStadiumSeries.image.source);
-        $('.highlight-thumbs img:nth-child(2)').css('background-color', '#fff');
-        $('.highlight-thumbs img:nth-child(3)').css('background-color', '#000');
-        //$('#image-description').html(Memories.sportingEvents.description[theCount]);
-        theCount -= 2;
-      }
-    }
+  $('.highlight-thumbs img').click(function(){
+    var item = $('.highlight-thumbs img').index(this);
+    console.log(item);
+    $('#highlight-image').attr('src', Memories[0][1]['content'][item].image)
   });
-
-  $('#vacations').click(function(){
-    $('#highlight').html(Memories.vacations.content);
-  });
-
-  $('#weddings').click(function(){
-    $('#highlight').html(Memories.weddings.content);
-  });
-
-
 
 });
