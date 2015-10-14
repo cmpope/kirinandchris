@@ -50,6 +50,7 @@ def registry():
 
 @app.route('/user/<name>')
 def user(name):
+    name = name.title()
     return render_template('user.html', name=name)
 
 

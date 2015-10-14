@@ -40,7 +40,7 @@ $(document).ready(function() {
       {
         "meta" : {
           "title" : "Sporting Events",
-          "description" : "We love sportingEvents ya bish"
+          "description" : "Kirin and Chris both grew up with families that are passionate about sports and they've enjoyed attending many sporting events throughout their relationship. Their favorite sports memories together include the 2013 NFC Championship in Atlanta, the final regular season game at Candlestick Park and the 2011 Cal vs. Stanford football game."
         }
       },
       {
@@ -50,19 +50,19 @@ $(document).ready(function() {
               "title" : "Final 49ers Game at Candlestick Park",
               "image" : "static/49er-game-hd.JPG",
               "alt" : "kirin-mysorewala-chris-pope-wedding-memories-49er-game",
-              "date" : "February 16, 1900 | San Francisco, CA"
+              "date" : "December, 24, 2013 | San Francisco, CA"
             },
             {
               "title" : "Giants Spring Training",
               "image" : "static/giants-spring-training-hd.JPG",
               "alt" : "kirin-mysorewala-chris-pope-wedding-memories-giants-spring-training",
-              "date" : "February 16, 1900 | Scottsdale, AZ"
+              "date" : "March 23, 2013 | Scottsdale, AZ"
             },
             {
               "title" : "Sharks Stadium Series Game vs LA Kings",
               "image" : "static/sharks-stadium-series-hd.JPG",
               "alt" : "kirin-mysorewala-chris-pope-wedding-memories-giants-spring-training",
-              "date" : "February 16, 1900 | Santa Clara, CA"
+              "date" : "February 21, 2015 | Santa Clara, CA"
             }
           ]
       }

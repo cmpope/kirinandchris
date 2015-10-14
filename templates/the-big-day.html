@@ -4,6 +4,8 @@
 
 {% block head %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='business-frontpage.css') }}">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="static/business-frontpage.js"></script>
     <title>Kirin and Chris Wedding Location</title>
 {% endblock %}
 
@@ -22,14 +24,18 @@
     </header>
 
     <!-- Page Content -->
+    <!--<h1>The Ceremony</h1>-->
+
     <div class="container">
 
         <hr>
 
+
         <div class="row">
             <div class="col-sm-8">
-                <h2>Holman Ranch</h2>
-                <p>Tucked away in the rolling hills of Carmel Valley, historic Holman Ranch provides a unique and memorable setting for weddings, special events, family gatherings, corporate retreats, and team-building events. With its charming gardens, stunning mountain views and serenity, this private estate affords old-world charm while providing modern day conveniences. This impressive property includes a fully restored stone hacienda, overnight guest rooms, vineyards, olive grove, horse stables and a tasting room where guests can sample our wines.</p>
+                <h2>The Ceremony</h2>
+                <p>The ceremony and reception will be held at Holman Ranch in Carmel Valley, California. The ceremony will begin at 4pm, so it is requested that you <b>arrive on property no later than 3:30pm</b>. Please be prepared to be outdoors for most of the evening.</p> 
+                <p>Following the reception, the bride and groom invite you to join them and their families for drinks and late-night bites at Will’s Fargo Steakhouse.</p>
                 <p>
                     <a class="btn btn-default btn-lg" href="http://www.holmanranch.com">View Photos &raquo;</a>
                 </p>
@@ -50,27 +56,68 @@
             </div>
         </div>
         <!-- /.row -->
+    </div>
 
+    <!--<h1>Transportation</h1>-->
+
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Transportation</h2>
+                <p>Transportation will be provided to/from the Hyatt Regency Monterey & Los Laureles Lodge in Carmel Valley. Further details will be provided closer to the event</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--<h1>Where to Stay</h1>-->
+
+    <div class="container">
         <hr>
 
         <div class="row">
+            <div class="col-sm-12">
+                <h2>Where to Stay</h2>
+            </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #1</h2>
+                <img class="img-circle img-responsive img-center" src="static/bernardus.jpg" alt="bernardus-lodge-and-spa">
+                <h2>Bernardus Lodge & Spa</h2>
                 <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #2</h2>
+                <img class="img-circle img-responsive img-center" src="static/quail-lodge.png" alt="quail-lodge-and-golf-club">
+                <h2>Quail Lodge & Golf Club</h2>
                 <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #3</h2>
+                <img class="img-circle img-responsive img-center" src="static/carmel-valley-ranch.jpg" alt="carmel-valley-ranch">
+                <h2>Carmel Valley Ranch</h2>
                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
             </div>
         </div>
         <!-- /.row -->
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="static/hyatt.jpg" alt="hyatt-regency-monterey">
+                <h2>Hyatt Regency Monterey</h2>
+                <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="static/carmel-valley-lodge.jpg" alt="carmel-valley-lodge">
+                <h2>Carmel Valley Lodge</h2>
+                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="static/los-laureles.jpg" alt="los-laureles">
+                <h2>Los Laureles</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
 
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
@@ -93,6 +140,11 @@
 
         <hr>
 
+        <div class="row">
+            <div id="map"></div>
+        </div>
+
+
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -106,4 +158,8 @@
     </div>
     <!-- /.container -->
 
+{% endblock %}
+
+{% block scripts %}
+    <!--<script type="text/javascript" src="static/business-frontpage.js"></script>-->
 {% endblock %}
