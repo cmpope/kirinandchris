@@ -36,6 +36,7 @@ footer {
 
 .col-sm-4 {
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .col-sm-4 img{
