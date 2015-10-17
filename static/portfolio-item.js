@@ -1,5 +1,39 @@
 $(document).ready(function() {
+  $('#sporting-events').hide();
+  $('#vacations').hide();
+  $('#weddings').hide();
 
+  $('#tasting-beer-thumb').click(function(){
+    $('#tasting-beer').show();
+    $('#sporting-events').hide();
+    $('#vacations').hide();
+    $('#weddings').hide();
+  });
+
+  $('#sporting-events-thumb').click(function(){
+    $('#tasting-beer').hide();
+    $('#sporting-events').show();
+    $('#vacations').hide();
+    $('#weddings').hide();
+  });
+
+  $('#vacations-thumb').click(function(){
+    $('#tasting-beer').hide();
+    $('#sporting-events').hide();
+    $('#vacations').show();
+    $('#weddings').hide();
+  });
+
+  $('#weddings-thumb').click(function(){
+    $('#tasting-beer').hide();
+    $('#sporting-events').hide();
+    $('#vacations').hide();
+    $('#weddings').show();
+  });
+
+
+
+/*
   var Memories = [
 
     //***TASTING BEER***
@@ -166,7 +200,7 @@ $(document).ready(function() {
       }
     }
 */
-
+/*
     $('.highlight-thumbs img').click(function(){
       var item = $('.highlight-thumbs img').index(this);
       console.log(item);
@@ -188,5 +222,7 @@ $(document).ready(function() {
     console.log(item);
     $('#highlight-image').attr('src', Memories[0][1]['content'][item].image)
   });
+*/
+
 
 });

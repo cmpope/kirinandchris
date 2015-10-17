@@ -52,4 +52,17 @@ h5.portfolio-item {
   cursor: pointer;
 }
 
+.image {
+  display: inline-block;
+  position: relative;
+}
+
+.image img {
+  display: block;
+}
+
+.overaly {
+  position: absolute;
+}
+
 

@@ -53,6 +53,11 @@
                     <br>
                     <abbr title="Email">E:</abbr> <a href="mailto:#">info@kirinandchris.com</a>
                 </address>
+                <h5>Current Weather</h5>
+                <span id="theWeather"></span><a target="_blank" href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Carmel+Valley%2C+CA&MR=1"><img id="wicon" src=""><p id="wdesc" class="text-capitalize"></p></a>
+                <h5>Historical Averages on 10/15</h5>
+                <h6>Hi:<span id="temp_hi"></span></h6>
+                <h6>Lo:<span id="temp_lo"></span></h5>
             </div>
         </div>
         <!-- /.row -->
@@ -80,7 +85,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h2>Where to Stay</h2>
-                <p><em>Please consider booking accommodations as soon as possible as there are several other events in the area on October 15th. Note that most hotels require a two-night minimum stay.</em></p>
+                <p>Please consider booking accommodations as soon as possible as there are several other events in the area on October 15th. Note that most hotels require a two-night minimum stay.</p>
             </div>
             <div class="col-sm-4">
                 <img class="img-circle img-responsive img-center" src="static/carmel-valley-lodge.jpg" alt="carmel-valley-lodge">
@@ -218,5 +223,5 @@
 {% endblock %}
 
 {% block scripts %}
-    <!--<script type="text/javascript" src="static/business-frontpage.js"></script>-->
+    <script type="text/javascript" src="static/wunderground.js"></script>
 {% endblock %}

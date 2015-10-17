@@ -32,9 +32,26 @@
             <h1>This is the button click</h1>
         </div>
 
-        <div>
-            <button id="the-button">Click Me</button>
+        <div id="stuff-2" class="row">
+            <img src="{{ url_for('static', filename='kirinandchris-favicon.png') }}">
         </div>
+
+        <div id="stuff-3" class="row">
+            <img src="{{ url_for('static', filename='star-icon.png') }}">
+        </div>
+
+        <div id="stuff-4" class="row">
+            <img src="{{ url_for('static', filename='flower-girl.jpg') }}">
+        </div>
+
+        <div>
+            <button id="button1">#1</button>
+            <button id="button2">#2</button>
+            <button id="button3">#3</button>
+            <button id="button4">#4</button>
+        </div>
+
+
         
 
 
@@ -79,9 +96,32 @@
     <script type="text/javascript">
         $(document).ready(function(){
             console.log('im ready');
-            $('#stuff-1').hide();
-            $('#the-button').click(function(){
-                $('#stuff-1').toggle();
+            $('#stuff-2').hide();
+            $('#stuff-3').hide();
+            $('#stuff-4').hide();
+            $('#button1').click(function(){
+                $('#stuff-1').show();
+                $('#stuff-2').hide();
+                $('#stuff-3').hide();
+                $('#stuff-4').hide();
+            });
+            $('#button2').click(function(){
+                $('#stuff-2').show();
+                $('#stuff-1').hide();
+                $('#stuff-3').hide();
+                $('#stuff-4').hide();
+            });
+            $('#button3').click(function(){
+                $('#stuff-3').show();
+                $('#stuff-2').hide();
+                $('#stuff-1').hide();
+                $('#stuff-4').hide();
+            });
+            $('#button4').click(function(){
+                $('#stuff-4').show();
+                $('#stuff-2').hide();
+                $('#stuff-3').hide();
+                $('#stuff-1').hide();
             });
         });
     </script>
