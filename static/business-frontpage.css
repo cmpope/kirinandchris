@@ -48,6 +48,10 @@ footer {
   cursor: pointer;
 }
 
+.map-wrapper {
+    margin-top: 20px;
+}
+
 #map {
     width: 70%;
     height: 500px;

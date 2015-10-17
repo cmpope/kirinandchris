@@ -1,35 +1,60 @@
 $(document).ready(function() {
+
+  var thumbs = $('.highlight-thumbs img');
+  var descriptions;
+  
+  $('.highlight-thumbs img').click(function(){
+    var item = $('.highlight-thumbs img').index(this);
+    var imgSrc = $(thumbs[item]).attr('src');
+    $('.highlight-image').attr('src', imgSrc);
+
+  });
+
   $('#sporting-events').hide();
   $('#vacations').hide();
   $('#weddings').hide();
+  $('.second-description-title').hide();
+  $('.second-description-date').hide();
+  $('.third-description-title').hide();
+  $('.third-description-date').hide();
 
   $('#tasting-beer-thumb').click(function(){
-    $('#tasting-beer').show();
     $('#sporting-events').hide();
     $('#vacations').hide();
     $('#weddings').hide();
+    var highlightImageSrc = $(thumbs[0]).attr('src');
+    $('.highlight-image').attr('src', highlightImageSrc);
+    $('#tasting-beer').show();
   });
 
   $('#sporting-events-thumb').click(function(){
     $('#tasting-beer').hide();
-    $('#sporting-events').show();
     $('#vacations').hide();
     $('#weddings').hide();
+    var highlightImageSrc = $(thumbs[3]).attr('src');
+    $('.highlight-image').attr('src', highlightImageSrc);
+    $('#sporting-events').show();
   });
 
   $('#vacations-thumb').click(function(){
     $('#tasting-beer').hide();
     $('#sporting-events').hide();
-    $('#vacations').show();
     $('#weddings').hide();
+    var highlightImageSrc = $(thumbs[6]).attr('src');
+    $('.highlight-image').attr('src', highlightImageSrc);
+    $('#vacations').show();
   });
 
   $('#weddings-thumb').click(function(){
     $('#tasting-beer').hide();
     $('#sporting-events').hide();
     $('#vacations').hide();
+    var highlightImageSrc = $(thumbs[9]).attr('src');
+    $('.highlight-image').attr('src', highlightImageSrc);
     $('#weddings').show();
   });
+
+
 
 
 
@@ -167,62 +192,6 @@ $(document).ready(function() {
       }
     ]
   ]
-
-
-  function updateHighlight(name) {
-    console.log(name);
-    $('#highlight-image').attr('src', Memories[name][1]['content'][0].image);
-    $('.highlight-thumbs img:nth-child(1)').attr('src', Memories[name][1]['content'][0].image);
-    $('.highlight-thumbs img:nth-child(2)').attr('src', Memories[name][1]['content'][1].image);
-    $('.highlight-thumbs img:nth-child(3)').attr('src', Memories[name][1]['content'][2].image);
-    $('.col-md-4 h3:first-child').html(Memories[name][0]['meta'].title);
-    $('.col-md-4 p').html(Memories[name][0]['meta'].description);
-    $('#first-description').html(Memories[name][1]['content'][0].title);
-    $('#second-description').html(Memories[name][1]['content'][0].date);
-    console.log(Memories[name][0]['meta'].description);
-
-/*
-    var myTimer = setInterval(rotateImage(name), 5000);
-
-    var i = 1;
-
-    function rotateImage(name) {  
-      console.log(i);
-      if (i == 0) {
-        $('#highlight-image').attr('src', Memories[name][1]['content'][0].image);
-        i += 1;
-      } else if (i == 1) {
-        $('#highlight-image').attr('src', Memories[name][1]['content'][1].image);
-        i += 1;
-      } else {
-        $('#highlight-image').attr('src', Memories[name][1]['content'][2].image);
-        i -= 2;
-      }
-    }
 */
-/*
-    $('.highlight-thumbs img').click(function(){
-      var item = $('.highlight-thumbs img').index(this);
-      console.log(item);
-      $('#highlight-image').attr('src', Memories[name][1]['content'][item].image);
-      $('.highlight-thumbs img:focus').attr('background-color', "#00");
-    });
-
-
-  };
-
-
-  $('.col-sm-3').click(function(){
-    var name = $('.col-sm-3').index(this);
-    updateHighlight(name);
-  });
-
-  $('.highlight-thumbs img').click(function(){
-    var item = $('.highlight-thumbs img').index(this);
-    console.log(item);
-    $('#highlight-image').attr('src', Memories[0][1]['content'][item].image)
-  });
-*/
-
 
 });

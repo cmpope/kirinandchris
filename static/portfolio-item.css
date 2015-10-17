@@ -16,11 +16,11 @@ footer {
     margin: 50px 0;
 }
 
-.description {
+.image-description {
   margin-top: 35px;
 }
 
-.highlight-image > img {
+.highlight-image {
   margin: auto;
   width: 750px;
 }
