@@ -13,6 +13,9 @@ $(document).ready(function() {
   $('#sporting-events').hide();
   $('#vacations').hide();
   $('#weddings').hide();
+  $('#pebble-beach').hide();
+  $('#lmu').hide();
+  $('#family').hide();
   $('.second-description-title').hide();
   $('.second-description-date').hide();
   $('.third-description-title').hide();
@@ -22,6 +25,9 @@ $(document).ready(function() {
     $('#sporting-events').hide();
     $('#vacations').hide();
     $('#weddings').hide();
+    $('#pebble-beach').hide();
+    $('#lmu').hide();
+    $('#family').hide();
     var highlightImageSrc = $(thumbs[0]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
     $('#tasting-beer').show();
@@ -31,6 +37,9 @@ $(document).ready(function() {
     $('#tasting-beer').hide();
     $('#vacations').hide();
     $('#weddings').hide();
+    $('#pebble-beach').hide();
+    $('#lmu').hide();
+    $('#family').hide();
     var highlightImageSrc = $(thumbs[3]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
     $('#sporting-events').show();
@@ -40,6 +49,9 @@ $(document).ready(function() {
     $('#tasting-beer').hide();
     $('#sporting-events').hide();
     $('#weddings').hide();
+    $('#pebble-beach').hide();
+    $('#lmu').hide();
+    $('#family').hide();
     var highlightImageSrc = $(thumbs[6]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
     $('#vacations').show();
@@ -49,14 +61,49 @@ $(document).ready(function() {
     $('#tasting-beer').hide();
     $('#sporting-events').hide();
     $('#vacations').hide();
+    $('#pebble-beach').hide();
+    $('#lmu').hide();
+    $('#family').hide();
     var highlightImageSrc = $(thumbs[9]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
     $('#weddings').show();
   });
 
+  $('#pebble-beach-thumb').click(function(){
+    $('#tasting-beer').hide();
+    $('#sporting-events').hide();
+    $('#vacations').hide();
+    $('#weddings').hide();
+    $('#lmu').hide();
+    $('#family').hide();
+    var highlightImageSrc = $(thumbs[12]).attr('src');
+    $('.highlight-image').attr('src', highlightImageSrc);
+    $('#pebble-beach').show();
+  });
 
+  $('#lmu-thumb').click(function(){
+    $('#tasting-beer').hide();
+    $('#sporting-events').hide();
+    $('#vacations').hide();
+    $('#weddings').hide();
+    $('#pebble-beach').hide();
+    $('#family').hide();
+    var highlightImageSrc = $(thumbs[15]).attr('src');
+    $('.highlight-image').attr('src', highlightImageSrc);
+    $('#lmu').show();
+  });
 
-
+  $('#family-thumb').click(function(){
+    $('#tasting-beer').hide();
+    $('#sporting-events').hide();
+    $('#vacations').hide();
+    $('#weddings').hide();
+    $('#pebble-beach').hide();
+    $('#lmu').hide();
+    var highlightImageSrc = $(thumbs[18]).attr('src');
+    $('.highlight-image').attr('src', highlightImageSrc);
+    $('#family').show();
+  });
 
 /*
   var Memories = [
