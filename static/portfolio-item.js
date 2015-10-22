@@ -4,7 +4,9 @@ $(document).ready(function() {
   var descriptions;
   
   $('.highlight-thumbs img').click(function(){
+    $('.highlight-thumbs img').removeClass('highlight-thumbs-click');
     var item = $('.highlight-thumbs img').index(this);
+    $(this).addClass('highlight-thumbs-click');
     var imgSrc = $(thumbs[item]).attr('src');
     $('.highlight-image').attr('src', imgSrc);
 
@@ -30,6 +32,8 @@ $(document).ready(function() {
     $('#family').hide();
     var highlightImageSrc = $(thumbs[0]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
+    $(thumbs).removeClass('highlight-thumbs-click');
+    $(thumbs[0]).addClass('highlight-thumbs-click');
     $('#tasting-beer').show();
   });
 
@@ -42,6 +46,8 @@ $(document).ready(function() {
     $('#family').hide();
     var highlightImageSrc = $(thumbs[3]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
+    $(thumbs).removeClass('highlight-thumbs-click');
+    $(thumbs[3]).addClass('highlight-thumbs-click');
     $('#sporting-events').show();
   });
 
@@ -54,6 +60,8 @@ $(document).ready(function() {
     $('#family').hide();
     var highlightImageSrc = $(thumbs[6]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
+    $(thumbs).removeClass('highlight-thumbs-click');
+    $(thumbs[6]).addClass('highlight-thumbs-click');
     $('#vacations').show();
   });
 
@@ -66,6 +74,8 @@ $(document).ready(function() {
     $('#family').hide();
     var highlightImageSrc = $(thumbs[9]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
+    $(thumbs).removeClass('highlight-thumbs-click');
+    $(thumbs[9]).addClass('highlight-thumbs-click');
     $('#weddings').show();
   });
 
@@ -78,6 +88,8 @@ $(document).ready(function() {
     $('#family').hide();
     var highlightImageSrc = $(thumbs[12]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
+    $(thumbs).removeClass('highlight-thumbs-click');
+    $(thumbs[12]).addClass('highlight-thumbs-click');
     $('#pebble-beach').show();
   });
 
@@ -90,6 +102,8 @@ $(document).ready(function() {
     $('#family').hide();
     var highlightImageSrc = $(thumbs[15]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
+    $(thumbs).removeClass('highlight-thumbs-click');
+    $(thumbs[15]).addClass('highlight-thumbs-click');
     $('#lmu').show();
   });
 
@@ -102,6 +116,8 @@ $(document).ready(function() {
     $('#lmu').hide();
     var highlightImageSrc = $(thumbs[18]).attr('src');
     $('.highlight-image').attr('src', highlightImageSrc);
+    $(thumbs).removeClass('highlight-thumbs-click');
+    $(thumbs[18]).addClass('highlight-thumbs-click');
     $('#family').show();
   });
 

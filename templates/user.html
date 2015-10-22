@@ -13,12 +13,31 @@
     img {
       margin: 10px;
     }
+
+    .bg-full-img {
+        display: block;
+        width: 100%;
+        text-align: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
   </style>
+{% endblock %}
+
+{% block body_content %}
+    <div class="container-fluid bg-full-img">
+        <img src="{{ url_for('static', filename='kirin-chris-maui-2015.jpg') }}">
+    </div>
 {% endblock %}
 
 {% block page_content %}
 
+
+
     <div class="container">
+       
 
         <!-- Portfolio Item Heading -->
         <div class="row">

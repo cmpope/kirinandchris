@@ -52,6 +52,15 @@ footer {
     margin-top: 20px;
 }
 
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 #map {
     width: 70%;
     height: 500px;

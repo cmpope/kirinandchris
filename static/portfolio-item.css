@@ -52,6 +52,10 @@ h5.portfolio-item {
   cursor: pointer;
 }
 
+.highlight-thumbs-click {
+  background-color: grey;
+}
+
 .image {
   display: inline-block;
   position: relative;
