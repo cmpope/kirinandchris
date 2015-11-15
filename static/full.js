@@ -12,7 +12,7 @@ $(document).ready(function(){
       $('.full').css({"background": "url('/static/kirin-chris-engagement-photo-bench.jpg') no-repeat center center fixed", "-webkit-background-size" : "cover", "-moz-background-size": "cover", "background-size": "cover", "-o-background-size": "cover"});
       theCount += 1;
     } else {
-      $('.full').css({"background": "url('/static/kirin-chris-engagement-photo-forest.JPG') no-repeat center center fixed", "-webkit-background-size" : "cover", "-moz-background-size": "cover", "background-size": "cover", "-o-background-size": "cover"});
+      $('.full').css({"background": "url('/static/kirin-chris-engagement-photo-forest.jpg') no-repeat center center fixed", "-webkit-background-size" : "cover", "-moz-background-size": "cover", "background-size": "cover", "-o-background-size": "cover"});
       theCount -= 2;
     }
    

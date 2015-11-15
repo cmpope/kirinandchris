@@ -15,6 +15,18 @@ $(document).ready(function() {
     $(description).show();
   });
 
+  /*
+  //keyCode JS to detect right/left arrow push and move image
+  $('body').keydown(function(e){
+    if (e.keyCode == 39) {
+      if thumbs.style('display', 'none')
+
+    }
+  });
+
+  //end keyCode JS
+  */
+
   $('#sporting-events').hide();
   $('#vacations').hide();
   $('#weddings').hide();
