@@ -55,6 +55,11 @@ body {
     font-size: 50px;
 }
 
+#overlay-words {
+    margin-top: 110px;
+    margin-bottom: -100px;
+}
+
 footer {
     margin: 50px 0;
 }
@@ -84,10 +89,6 @@ footer {
         font-size: 35px;
     }
 
-    #overlay-words {
-        margin-top: 110px;
-        margin-bottom: -100px;
-    }
 }
 
 @media(max-width:991px) {
@@ -133,7 +134,10 @@ footer {
         font-size: 25px;
     }
 
-    
+    #overlay-words {
+        width: inherit;
+    }
+
 }
 
 @media(max-width:668px) {
@@ -156,11 +160,15 @@ footer {
     }
 
     .headline h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .headline h2 {
-        font-size: 30px;
+        font-size: 24px;
+    }
+
+    #overlay-words {
+        margin-bottom: 0px;
     }
 }
 

@@ -61,7 +61,13 @@ a:hover {
     color: black;
 }
 
-#map {
+#airport-map {
+    width: 70%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#hotel-map {
     width: 70%;
     height: 500px;
     margin: 0 auto;
