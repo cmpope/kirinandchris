@@ -37,68 +37,8 @@ var hotelLocations = [
   }
 ]
 
-var airportLocations = [
-  {
-    "name" : "Holman Ranch",
-    "coordinates" : {lat: 36.479902, lng: -121.7284547},
-    "icon" : "static/star-icon.png",
-    "infowindow" : "<a target='_blank' href='http://www.holmanranch.com'>Holman Ranch</a>"
-  },
-  {
-    "name" : "SFO",
-    "coordinates" : {lat: 37.6213129, lng: -122.3811441},
-    "icon" : "static/airplane-icon.png",
-    "infowindow" : "<a target='_blank' href='http://www.holmanranch.com'>Holman Ranch</a>"
-  },
-  {
-    "name" : "OAK",
-    "coordinates" : {lat: 37.7125689, lng: -122.2219315},
-    "infowindow" : "<a target='_blank' href='http://www.bernarduslodge.com'>Bernardus Lodge & Spa</a>"
-  },
-  {
-    "name" : "SJC",
-    "coordinates" : {lat: 37.3639472, lng: -121.9311262},
-    "infowindow" : "<a target='_blank' href='http://www.bernarduslodge.com'>Bernardus Lodge & Spa</a>"
-  },
-  {
-    "name" : "MRY",
-    "coordinates" : {lat: 36.588269, lng: -121.8512978},
-    "infowindow" : "<a target='_blank' href='http://www.bernarduslodge.com'>Bernardus Lodge & Spa</a>"
-  }
-]
-
-var hotelMap, airportMap;
+var hotelMap;
 var markers = [];
-
-function initAirportMap() {
-  // Create a map object and specify the DOM element for display.
-    airportMap = new google.maps.Map(document.getElementById('airport-map'), {
-    center: {lat: 37.050165, lng:-121.899243},
-    scrollwheel: false,
-    zoom: 8,
-  });
-
-  var infowindow = new google.maps.InfoWindow();
-
-  var marker, i;
-
-  for (i = 0; i < airportLocations.length; i++) {
-    marker = new google.maps.Marker({
-      position: airportLocations[i].coordinates,
-      label: airportLocations[i].name,
-      title: airportLocations[i].name,
-      map: airportMap,
-      icon : airportLocations[i].icon
-    });
-
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infowindow.setContent(airportLocations[i].infowindow);
-        infowindow.open(map, marker);
-      }
-    })(marker, i));
-  }
-}
 
 function initHotelMap() {
   // Create a map object and specify the DOM element for display.
@@ -131,7 +71,6 @@ function initHotelMap() {
 }
 
 google.maps.event.addDomListener(window, 'load', initHotelMap);
-google.maps.event.addDomListener(window, 'load', initAirportMap);
 
 
 
