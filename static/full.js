@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+/*
   var callTimer = setInterval(function(){rotatePics()}, 5000);
 
   var theCount = 0;

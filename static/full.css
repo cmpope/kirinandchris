@@ -9,7 +9,7 @@ body {
 }
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
-
+/*
 .full {
     background: url('/static/kirin-chris-engagement-photo-field.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -17,6 +17,10 @@ body {
     background-size: cover;
     -o-background-size: cover;
     height: 100%;
+}
+*/
+ul {
+  list-style-type: none;
 }
 
 .my-heading {
@@ -31,6 +35,65 @@ body {
   width: 100%;
 }
 
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+
+.cb-slideshow:after { 
+    content: '';
+    /*background: transparent url(../images/pattern.png) repeat top left; */
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 26s linear infinite 0s; 
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url('/static/kirin-chris-engagement-photo-field.jpg') 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url('/static/kirin-chris-engagement-photo-bench.jpg');
+    animation-delay: 9s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url('/static/kirin-chris-engagement-walking-forest.jpg');
+    animation-delay: 18s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    33% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 0 }
+}
 
 
+.no-cssanimations .cb-slideshow li span{
+  opacity: 1;
+}
 
