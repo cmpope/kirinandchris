@@ -71,6 +71,11 @@ a:hover {
     border-radius: 25px;
 }
 
+.air-travel-text {
+    text-align: center;
+    font-size: 15px;
+}
+
 #airport-map {
     width: 70%;
     height: 500px;
