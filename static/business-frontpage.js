@@ -37,12 +37,12 @@ var hotelLocations = [
   }
 ]
 
-var hotelMap;
+var map;
 var markers = [];
 
 function initHotelMap() {
   // Create a map object and specify the DOM element for display.
-    hotelMap = new google.maps.Map(document.getElementById('hotel-map'), {
+    map = new google.maps.Map(document.getElementById('hotel-map'), {
     center: {lat: 36.555154, lng:-121.826674},
     scrollwheel: false,
     zoom: 11,
@@ -57,7 +57,7 @@ function initHotelMap() {
       position: hotelLocations[i].coordinates,
       label: hotelLocations[i].name,
       title: hotelLocations[i].name,
-      map: hotelMap,
+      map: map,
       icon : hotelLocations[i].icon
     });
 
