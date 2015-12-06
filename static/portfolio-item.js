@@ -2,19 +2,252 @@ $(document).ready(function() {
 
   var thumbs = $('.highlight-thumbs img');
   var allThumbDescriptions = $('.image-description .thumb-description');
+
+  function imageTracker() {
+    var shownImage = 0;
+
+    $('.other-memories').click(function(){
+      var otherMemoriesCount = $('.other-memories').index(this);
+      if (otherMemoriesCount == 0) {
+        shownImage = 0;
+      } else if (otherMemoriesCount == 1) {
+        shownImage = 3;
+      } else if (otherMemoriesCount == 2) {
+        shownImage = 6;
+      } else if (otherMemoriesCount == 3) {
+        shownImage = 9
+      } else if (otherMemoriesCount == 4) {
+        shownImage = 12;
+      } else if (otherMemoriesCount == 5) {
+        shownImage = 15;
+      } else if (otherMemoriesCount == 6) {
+        shownImage = 18;
+      }
+      return shownImage;
+    });
+
+    $('.highlight-thumbs img').click(function(){
+      shownImage = $('.highlight-thumbs img').index(this);
+      nextPicture(shownImage);
+      return shownImage;
+    });
+
+    $('body').keydown(function(e){
+      if (e.keyCode == 39) {
+        switch(shownImage) {
+          case 0:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 1:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 2:
+            break;
+
+          case 3:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 4:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 5:
+            break;
+
+          case 6:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 7:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 8:
+            break;
+
+          case 9:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 10:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 11:
+            break;
+
+          case 12:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 13:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 14:
+            break;
+
+          case 15: 
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 16:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 17:
+            break;
+
+          case 18:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 19:
+            shownImage += 1;
+            nextPicture(shownImage);
+            break;
+
+          case 20:
+            break;
+        }
+      }
+
+      if (e.keyCode == 37) {
+       switch(shownImage) {
+          case 0:
+            break;
+
+          case 1:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 2:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 3:
+            break;
+
+          case 4:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 5:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 6:
+            break;
+
+          case 7:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 8:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 9:
+            break;
+
+          case 10:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 11:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 12:
+            break;
+
+          case 13:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 14:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 15: 
+            break;
+
+          case 16:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 17:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 18:
+            break;
+
+          case 19:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
+
+          case 20:
+            shownImage -= 1;
+            nextPicture(shownImage);
+            break;
   
-  $('.highlight-thumbs img').click(function(){
+        }
+      }
+    });
+
+  }
+
+  function nextPicture(shownImage) {
+    //2. Change the image
     $('.highlight-thumbs img').removeClass('highlight-thumbs-click');
     var descriptions = $('.image-description .thumb-description');
     $(descriptions).hide();
-    var item = $('.highlight-thumbs img').index(this);
-    var description = descriptions[item];
-    $(this).addClass('highlight-thumbs-click');
-    var imgSrc = $(thumbs[item]).attr('src');
-    $('.highlight-image').attr('src', imgSrc);
+    var description = descriptions[shownImage];
     $(description).show();
-  });
+    $(thumbs[shownImage]).addClass('highlight-thumbs-click');
+    var imgSrc = $(thumbs[shownImage]).attr('src');
+    $('.highlight-image').attr('src', imgSrc);
+    //3. return new item number
+  }
 
+  function previousPicture(shownImage) {
+    var imgSrc = $(thumbs[shownImage]).attr('src');
+    $('.highlight-image').attr('src', imgSrc);
+  }
+
+  function newMemory() {
+
+  }
   /*
   //keyCode JS to detect right/left arrow push and move image
   $('body').keydown(function(e){
@@ -280,5 +513,5 @@ $(document).ready(function() {
     ]
   ]
 */
-
+  imageTracker();
 });
