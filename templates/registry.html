@@ -3,17 +3,9 @@
 {% block title %}Flasky{% endblock %}
 
 {% block head %}
-  <title>Kirin and Chris Pope Wedding Registry</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='registry.css') }}">
+    <title>Kirin and Chris Pope Wedding Registry</title>
   
-  <style type="text/css">
-    body {
-      margin-top: 100px;
-    }
-
-    img {
-      margin: 10px;
-    }
-  </style>
 {% endblock %}
 
 {% block page_content %}
@@ -23,20 +15,21 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Coming Soon
+                <h1 class="page-header">Registries
                     <small></small>
                 </h1>
             </div>
         
 
 
-    <!--Placeholder for Registry store images
+    <!--Placeholder for Registry store images-->
             <div id="tasting-beer" class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="static/sierra-nevada-brewery.JPG" alt="kirin-mysorewala-chris-pope-wedding-memories-sierra-nevada-brewery">
+                <a target="_blank" href="http://www.honeyfund.com/wedding/kirinandchris">
+                    <img class="img-responsive portfolio-item" src="{{ url_for('static', filename='honeyfund-logo.png') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-sierra-nevada-brewery">
                 </a>
             </div>
 
+<!--
             <div class="col-sm-3 col-xs-6">
                 <a href="#">
                     <img class="img-responsive portfolio-item" src="static/49er-game.JPG" alt="kirin-mysorewala-chris-pope-wedding-memories-49er-game">
@@ -54,7 +47,7 @@
                     <img class="img-responsive portfolio-item" src="static/kirin-chris-jenny-wedding.jpg" alt="kirin-mysorewala-chris-pope-wedding-memories-jenny-wedding">
                 </a>
             </div>
-    -->
+-->
 
   </div>
 

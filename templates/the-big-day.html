@@ -14,7 +14,7 @@
 <!-- Image Background Page Header -->
     <!-- Note: The background image is set within the business-casual.css file. -->
     <header class="business-header">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="tagline">The Big Day</h1>
@@ -32,27 +32,39 @@
 
 
         <div class="row">
-            <div class="col-sm-8">
-                <h2>The Ceremony</h2>
-                <p>The ceremony and reception will be held at Holman Ranch in Carmel Valley, California. The ceremony will begin at 4pm, so it is requested that you <b>arrive on property no later than 3:30pm</b>. Please be prepared to be outdoors for most of the evening.</p> 
-                <p>Following the reception, the bride and groom invite you to join them and their families for drinks and late-night bites at Will’s Fargo Steakhouse.</p>
-                <p>
-                    <a class="btn btn-default btn-lg" href="http://www.holmanranch.com">View Photos &raquo;</a>
-                </p>
-            </div>
-            <div class="col-sm-4">
-                <h2>Location</h2>
-                <address>
-                    <a target="_blank" href="https://www.google.com/maps/place/Holman+Ranch/@36.4819829,-121.7190045,17z/data=!3m1!4b1!4m2!3m1!1s0x808df47f844ebea9:0x1bf4d0b15792f623"><strong>Holman Ranch</strong></a>
-                    <br>19 Carmel Valley Rd. 
-                    <br>Carmel Valley, CA 93924
-                    <br>
-                </address>
+            <div class="col-xs-6 col-sm-8">
+                <h2>Ceremony & Reception</h2>
+                <p>The Ceremony and reception will be held at <a target="_blank" href="http://www.holmanranch.com">Holman Ranch</a> in Carmel Valley, California. The ceremony will begin at 4pm, so it is requested that you arrive on the property by <b>3:30pm.</b></p> 
+                <p>Upon arrival, go through the entrance gate and follow the single lane road past the stables. An attendant will indicate where to park and your group will be shuttled up to the ceremony site.</p>
+                <p>Following the reception, the bride and groom invite you to join them and their families for drinks and late-night bites at <a target="_blank" href="http://wfrestaurant.com/">Will’s Fargo Steakhouse</a>.</p>
+                <p>Please be prepared to be outdoors for most of the evening.</p>
+                <h3>Questions?</h3>
                 <address>
                     <abbr title="Phone">P:</abbr>(831) 659-2640
                     <br>
                     <abbr title="Email">E:</abbr> <a href="mailto:#">info@kirinandchris.com</a>
                 </address>
+                <!--View photos button
+                <p>
+                    <a class="btn btn-default btn-lg" href="http://www.holmanranch.com">View Photos &raquo;</a>
+                </p>
+                -->
+            </div>
+            <div class="col-xs-6 col-sm-4">
+                <h2>Location</h2>
+                <address>
+                    <a target="_blank" href="https://www.google.com/maps/place/Holman+Ranch/@36.4819829,-121.7190045,17z/data=!3m1!4b1!4m2!3m1!1s0x808df47f844ebea9:0x1bf4d0b15792f623"><strong>Holman Ranch</strong></a>
+                    <br>60 Holman Rd. 
+                    <br>Carmel Valley, CA 93924
+                    <br>
+                </address>
+            <!--
+                <address>
+                    <abbr title="Phone">P:</abbr>(831) 659-2640
+                    <br>
+                    <abbr title="Email">E:</abbr> <a href="mailto:#">info@kirinandchris.com</a>
+                </address>
+            -->
                 <h5>Current Weather</h5>
                 <span id="theWeather"></span><a target="_blank" href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Carmel+Valley%2C+CA&MR=1"><img id="wicon" src=""><p id="wdesc" class="text-capitalize"></p></a>
                 <h5>Historical Averages on 10/15</h5>
@@ -70,13 +82,15 @@
         <div class="row">
             <div class="col-sm-12">
                 <h2>Transportation</h2>
-                <p>Transportation will be provided to/from the Hyatt Regency Monterey & Los Laureles Lodge in Carmel Valley. Further details will be provided closer to the event</p>
-                <h4>Air Travel<span class="glyphicon glyphicon-plane"></span></h4>
+                <h4>Shuttle Service</h4>
+                <p class="shuttle-service-text">Transportation will be provided to/from the Hyatt Regency Monterey & Los Laureles Lodge. Pick-up & drop-off schedules will be provided closer to the event.</p>
+
+                <h4>Air Travel</h4>
                 <div class="row">    
                     <div class="air-travel-text col-xs-2 col-sm-2">
                         SFO
                     </div>
-                    <div class="col-xs-10 col-sm-10 progress-custom">
+                    <div class="col-xs-10 col-sm-9 progress-custom">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
                         113 miles to Carmel Valley
                         </div>
@@ -86,7 +100,7 @@
                     <div class="air-travel-text col-xs-2 col-sm-2">
                         OAK
                     </div>
-                    <div class="col-xs-10 col-sm-10 progress-custom">
+                    <div class="col-xs-10 col-sm-9 progress-custom">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:89%">
                         112 miles to Carmel Valley
                         </div>
@@ -96,7 +110,7 @@
                     <div class="air-travel-text col-xs-2 col-sm-2">
                         SJC
                     </div>
-                    <div class="col-xs-10 col-sm-10 progress-custom">
+                    <div class="col-xs-10 col-sm-9 progress-custom">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:63%">
                         80 miles to Carmel Valley
                         </div>
@@ -106,7 +120,7 @@
                     <div class="air-travel-text col-xs-2 col-sm-2">
                         MRY
                     </div>
-                    <div class="col-xs-10 col-sm-10 progress-custom">
+                    <div class="col-xs-10 col-sm-9 progress-custom">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:12%">
                         14 miles
                         </div>
@@ -126,11 +140,13 @@
         <div class="row">
             <div class="col-sm-12">
                 <h2>Where to Stay</h2>
-                <p>Please consider booking accommodations as soon as possible as there are several other events in the area on October 15th. Note that most hotels require a two-night minimum stay.</p>
+                <p>Please consider booking accommodations as soon as possible since there are several other events in the area on our wedding date. The bride and groom will be staying at the ranch, but recommend the following hotels. If a traditional hotel doesn’t suit your needs, please also consider using <a class="normal-link" target="_blank" href="https://www.airbnb.com/">Airbnb</a> or <a class="normal-link" target="_blank" href="http://www.vrbo.com/">Vrbo</a>.</p>
+                <p>Note that most hotels require a two-night minimum stay.</p>
             </div>
             <div class="col-sm-4">
                 <a target="_blank" href="http://www.valleylodge.com/">
                     <img class="img-circle img-responsive img-center" src="static/carmel-valley-lodge.jpg" alt="carmel-valley-lodge">
+                </a>
                     <h2>Carmel Valley Lodge</h2>
                     <p>
                         $$
@@ -141,26 +157,26 @@
                     <br>
                         (831) 659-2261
                     </p>
-                </a>
             </div>
             <div class="col-sm-4">
                 <a target="_blank" href="http://loslaureles.com/">
                     <img class="img-circle img-responsive img-center" src="static/los-laureles.jpg" alt="los-laureles">
+                </a>
                     <h2>Los Laureles</h2>
                     <p>
                         $
                     <br>
                         2.4 miles from Holman Ranch
                     <br>    
-                        15 rooms have been blocked at a rate of $155/night to $245/night, dependent on room size. Reference the Mysorewala/Pope Wedding at booking (reserve by August 15, 2016). 
+                        15 rooms have been blocked at a rate of $155-$245/night. Reference the Mysorewala/Pope Wedding at booking (reserve by August 15, 2016). 
                     <br>
                         (831) 659-2233
                     </p>
-                </a>
             </div>
             <div class="col-sm-4">
                 <a target="_blank" href="http://www.bernarduslodge.com/">
                     <img class="img-circle img-responsive img-center" src="static/bernardus.jpg" alt="bernardus-lodge-and-spa">
+                </a>
                     <h2>Bernardus Lodge & Spa</h2>
                     <p>
                         $$$$
@@ -169,7 +185,6 @@
                     <br>
                         (831) 658-3400
                     </p>
-                </a>
             </div>
         </div>
         <!-- /.row -->
@@ -177,6 +192,7 @@
             <div class="col-sm-4">
                 <a target="_blank" href="http://www.carmelvalleyranch.com/">
                     <img class="img-circle img-responsive img-center" src="static/carmel-valley-ranch.jpg" alt="carmel-valley-ranch">
+                </a>
                     <h2>Carmel Valley Ranch</h2>
                     <p>
                         $$$
@@ -185,11 +201,11 @@
                     <br>
                         (855) 687-7262
                     </p>
-                </a>
             </div>
             <div class="col-sm-4">
-                <a target="_blank" href="https://www.quaillodge.com/">
+                <a target="_blank" href="https://gc.synxis.com/rez.aspx?Hotel=58674&Chain=14839&arrive=10/14/2016&depart=10/16/2016&adult=1&child=0&group=47856">
                     <img class="img-circle img-responsive img-center" src="static/quail-lodge.png" alt="quail-lodge-and-golf-club">
+                </a>
                     <h2>Quail Lodge & Golf Club</h2>
                     <p>
                         $$$
@@ -205,6 +221,7 @@
             <div class="col-sm-4">
                 <a target="_blank" href="https://aws.passkey.com/event/14276473/owner/4475/home">
                     <img class="img-circle img-responsive img-center" src="static/hyatt.jpg" alt="hyatt-regency-monterey">
+                </a>
                     <h2>Hyatt Regency Monterey</h2>
                     <p>
                         $$
@@ -215,7 +232,7 @@
                     <br>
                         (888) 421-1442
                     </p>
-                </a>
+
             </div>
         </div>
         <!-- /.row -->

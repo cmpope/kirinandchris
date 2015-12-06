@@ -12,7 +12,7 @@ body {
 
 .business-header {
     height: 400px;
-    background: url('holeman-ranch.jpg') center center no-repeat scroll;
+    background: url('holman-ranch-1.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -35,7 +35,6 @@ footer {
 }
 
 .col-sm-4 {
-    cursor: pointer;
     margin-top: 10px;
 }
 
@@ -56,6 +55,10 @@ a {
     color: black;
 }
 
+.normal-link {
+    color: #337ab7;
+}
+
 a:hover {
     text-decoration: none;
     color: black;
@@ -74,6 +77,10 @@ a:hover {
 .air-travel-text {
     text-align: center;
     font-size: 15px;
+}
+
+.shuttle-service-text {
+    padding-left: 10px;
 }
 
 #airport-map {

@@ -1,0 +1,14 @@
+body {
+  margin-top: 100px;
+}
+
+img {
+  margin: 10px;
+}
+
+img:hover {
+    -webkit-filter: drop-shadow(1px 1px 0 black)
+                  drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 black) 
+          drop-shadow(-1px -1px 0 black);
+}
