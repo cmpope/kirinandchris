@@ -47,6 +47,10 @@ def memories():
 def registry():
     return render_template('registry.html')
 
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('robots.txt')
+
 
 @app.route('/user/<name>')
 def user(name):
