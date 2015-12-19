@@ -24,6 +24,37 @@
 
         <!-- Portfolio Item Row -->
         <div id="highlight" class="row">
+            <div id="vacations">
+                <div class="col-md-8 col-sm-8">
+                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-hawaii-marketo-purple-label-society">
+                    
+                    <div class="highlight-thumbs">
+                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-hawaii-marketo-purple-label-society">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='mysorewala-family-vacation.JPG') }}" alt="kirin-mysorewala-chris-pope-mysorewala-family-vacation">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='fulton-ski-trip.JPG') }}" alt="kirin-mysorewala-chris-pope-fulton-ski-trip">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <h3>Vacations</h3>
+                    <p>We have been fortunate enough to share some incredible vacations. We’ve built lifelong memories in Palm Springs, Puerto Rico, Mexico, New York, Arizona and Las Vegas. However, our all-time favorite destinations are Hawaii and the Sonoma and Napa Valleys.</p>
+                    <div class="image-description">
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Marketo Purple Label Society</em></h5>
+                            <h5 class="thumb-description-style"><em>February 9, 2013 | Kailua-Kona, Hawaii</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Mysorewala Family Vacation</em></h5>
+                            <h5 class="thumb-description-style"><em>June 13, 2015 | Sonoma, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Fulton-Lambert Ski Trip</em></h5>
+                            <h5 class="thumb-description-style"><em>March 5, 2011 | Bear Valley, California</em></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="tasting-beer">
                 <div class="col-md-8 col-sm-8">
                     <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='sierra-nevada-brewery.JPG') }}" alt="kirin-mysorewala-chris-pope-sierra-nevada-brewery">
@@ -82,38 +113,6 @@
                         <div class="thumb-description">
                             <h5 class="thumb-description-style"><em>San Jose Sharks Stadium Series</em></h5>
                             <h5 class="thumb-description-style"><em>February 21, 2015 | Santa Clara, California</em></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div id="vacations">
-                <div class="col-md-8 col-sm-8">
-                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-hawaii-marketo-purple-label-society">
-                    
-                    <div class="highlight-thumbs">
-                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-hawaii-marketo-purple-label-society">
-                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='mysorewala-family-vacation.JPG') }}" alt="kirin-mysorewala-chris-pope-mysorewala-family-vacation">
-                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='fulton-ski-trip.JPG') }}" alt="kirin-mysorewala-chris-pope-fulton-ski-trip">
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-4">
-                    <h3>Vacations</h3>
-                    <p>We have been fortunate enough to share some incredible vacations. We’ve built lifelong memories in Palm Springs, Puerto Rico, Mexico, New York, Arizona and Las Vegas. However, our all-time favorite destinations are Hawaii and the Sonoma and Napa Valleys.</p>
-                    <div class="image-description">
-                        <div class="thumb-description">
-                            <h5 class="thumb-description-style"><em>Marketo Purple Label Society</em></h5>
-                            <h5 class="thumb-description-style"><em>February 9, 2013 | Kailua-Kona, Hawaii</em></h5>
-                        </div>
-                        <div class="thumb-description">
-                            <h5 class="thumb-description-style"><em>Mysorewala Sonoma Family Vacation</em></h5>
-                            <h5 class="thumb-description-style"><em>June 13, 2015 | Sonoma, California</em></h5>
-                        </div>
-                        <div class="thumb-description">
-                            <h5 class="thumb-description-style"><em>Lambert Ski Trip</em></h5>
-                            <h5 class="thumb-description-style"><em>March 5, 2011 | Bear Valley, California</em></h5>
                         </div>
                     </div>
                 </div>
@@ -254,6 +253,12 @@
                 <h3 class="page-header"></h3>
             </div>
 
+            <div id="vacations-thumb" class="other-memories col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-hawaii">
+                </a>
+            </div>
+
             <div id="tasting-beer-thumb" class="other-memories col-sm-3 col-xs-6">
                 <a href="#">
                     <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='sierra-nevada-brewery.JPG') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-sierra-nevada-brewery">
@@ -263,12 +268,6 @@
             <div id="sporting-events-thumb" class="other-memories col-sm-3 col-xs-6">
                 <a href="#">
                     <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='49er-game.JPG') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-49er-game">
-                </a>
-            </div>
-
-            <div id="vacations-thumb" class="other-memories col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-hawaii">
                 </a>
             </div>
 
