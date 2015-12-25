@@ -124,7 +124,7 @@ $(document).ready(function() {
             break;
 
           case 20:
-            showTastingBeer();
+            showVacations();
             shownImage -=20;
         }
       }
@@ -132,7 +132,9 @@ $(document).ready(function() {
       if (e.keyCode == 37) {
        switch(shownImage) {
           case 0:
-            break;
+            shownImage += 21;
+            showFamily();
+
 
           case 1:
             shownImage -= 1;
@@ -145,7 +147,7 @@ $(document).ready(function() {
             break;
 
           case 3:
-            showSportingEvents();
+            showVacations();
 
           case 4:
             shownImage -= 1;
@@ -158,7 +160,7 @@ $(document).ready(function() {
             break;
 
           case 6:
-            showVacations();
+            showTastingBeer();
 
           case 7:
             shownImage -= 1;
@@ -171,7 +173,7 @@ $(document).ready(function() {
             break;
 
           case 9:
-            showWeddings();
+            showSportingEvents();
 
           case 10:
             shownImage -= 1;
@@ -184,7 +186,7 @@ $(document).ready(function() {
             break;
 
           case 12:
-            showPebbleBeach();
+            showWeddings();
 
           case 13:
             shownImage -= 1;
@@ -197,7 +199,7 @@ $(document).ready(function() {
             break;
 
           case 15: 
-            showLmu();
+            showPebbleBeach();
 
           case 16:
             shownImage -= 1;
@@ -210,7 +212,7 @@ $(document).ready(function() {
             break;
 
           case 18:
-            showFamily();
+            showLmu();
 
           case 19:
             shownImage -= 1;
@@ -229,7 +231,6 @@ $(document).ready(function() {
   }
 
   function nextPicture(shownImage) {
-    //2. Change the image
     $('.highlight-thumbs img').removeClass('highlight-thumbs-click');
     var descriptions = $('.image-description .thumb-description');
     $(descriptions).hide();
@@ -238,7 +239,6 @@ $(document).ready(function() {
     $(thumbs[shownImage]).addClass('highlight-thumbs-click');
     var imgSrc = $(thumbs[shownImage]).attr('src');
     $('.highlight-image').attr('src', imgSrc);
-    //3. return new item number
   }
 
   function previousPicture(shownImage) {
@@ -258,12 +258,12 @@ $(document).ready(function() {
       $('#pebble-beach').hide();
       $('#lmu').hide();
       $('#family').hide();
-      var highlightImageSrc = $(thumbs[0]).attr('src');
+      var highlightImageSrc = $(thumbs[3]).attr('src');
       $('.highlight-image').attr('src', highlightImageSrc);
       $(thumbs).removeClass('highlight-thumbs-click');
-      $(thumbs[0]).addClass('highlight-thumbs-click');
+      $(thumbs[3]).addClass('highlight-thumbs-click');
       $('#tasting-beer').show();
-      $(allThumbDescriptions[0]).show();
+      $(allThumbDescriptions[3]).show();
   }
 
   $('#sporting-events-thumb').click(function(){
@@ -277,12 +277,12 @@ $(document).ready(function() {
       $('#pebble-beach').hide();
       $('#lmu').hide();
       $('#family').hide();
-      var highlightImageSrc = $(thumbs[3]).attr('src');
+      var highlightImageSrc = $(thumbs[6]).attr('src');
       $('.highlight-image').attr('src', highlightImageSrc);
       $(thumbs).removeClass('highlight-thumbs-click');
-      $(thumbs[3]).addClass('highlight-thumbs-click');
+      $(thumbs[6]).addClass('highlight-thumbs-click');
       $('#sporting-events').show();
-      $(allThumbDescriptions[3]).show();
+      $(allThumbDescriptions[6]).show();
   }
 
 
@@ -297,12 +297,12 @@ $(document).ready(function() {
       $('#pebble-beach').hide();
       $('#lmu').hide();
       $('#family').hide();
-      var highlightImageSrc = $(thumbs[6]).attr('src');
+      var highlightImageSrc = $(thumbs[0]).attr('src');
       $('.highlight-image').attr('src', highlightImageSrc);
       $(thumbs).removeClass('highlight-thumbs-click');
-      $(thumbs[6]).addClass('highlight-thumbs-click');
+      $(thumbs[0]).addClass('highlight-thumbs-click');
       $('#vacations').show();
-      $(allThumbDescriptions[6]).show();
+      $(allThumbDescriptions[0]).show();
   }
 
 

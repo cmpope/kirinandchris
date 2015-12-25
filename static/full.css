@@ -8,17 +8,6 @@ body {
     margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
-/*
-.full {
-    background: url('/static/kirin-chris-engagement-photo-field.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    height: 100%;
-}
-*/
 ul {
   list-style-type: none;
 }
@@ -97,3 +86,8 @@ ul {
   opacity: 1;
 }
 
+@media(max-width:375px) {
+  .my-heading {
+    font-size: 28px;
+  }
+}
