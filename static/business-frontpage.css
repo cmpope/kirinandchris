@@ -94,3 +94,16 @@ a:hover {
     height: 500px;
     margin: 0 auto;
 }
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.tagline {
+    padding-left: 5%;
+}
+
+.underline {
+    text-decoration: underline;
+}

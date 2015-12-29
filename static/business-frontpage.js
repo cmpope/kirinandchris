@@ -26,9 +26,9 @@ var hotelLocations = [
     "infowindow" : "<a target='_blank' href='https://aws.passkey.com/event/14276473/owner/4475/home'>Hyatt Regency Monterey</a>"
   },
   {
-    "name" : "Carmel Valley Lodge",
-    "coordinates" : {lat: 36.484192, lng: -121.7393141},
-    "infowindow" : "<a target='_blank' href='http://www.valleylodge.com'>Carmel Valley Lodge</a>"
+    "name" : "Hilton Garden Inn Monterey",
+    "coordinates" : {lat: 36.5381706, lng: -121.8901772},
+    "infowindow" : "<a target='_blank' href='http://www.hiltonmonterey.com/'>Hilton Garden Inn Monterey</a>"
   },
   {
     "name" : "Los Laureles",
