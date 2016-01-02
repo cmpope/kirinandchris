@@ -27,7 +27,7 @@ var hotelLocations = [
   },
   {
     "name" : "Hilton Garden Inn Monterey",
-    "coordinates" : {lat: 36.5381706, lng: -121.8901772},
+    "coordinates" : {lat: 36.5922565, lng: -121.8774177},
     "infowindow" : "<a target='_blank' href='http://www.hiltonmonterey.com/'>Hilton Garden Inn Monterey</a>"
   },
   {
