@@ -107,3 +107,8 @@ a:hover {
 .underline {
     text-decoration: underline;
 }
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
