@@ -70,6 +70,30 @@ footer {
     padding-right: 0px;
 }
 
+.loop-modal {
+    text-align: center;
+}
+
+.loop-controller {
+    max-width: 300px;
+}
+
+.modal-dialog {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.loop-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media(max-width:1200px) {
     #overlay-words {
         width: inherit;
