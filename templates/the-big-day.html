@@ -135,12 +135,26 @@
 
     <div class="container">
         <hr>
-
         <div class="row">
             <div class="col-sm-12">
                 <h2>Where to Stay</h2>
-                <p>Please consider booking accommodations <span class="underline"><strong>as soon as possible</strong></span> since there are several other events in the area on our wedding date. The bride and groom will be staying at the ranch, but recommend the following hotels. If a traditional hotel doesn’t suit your needs, please also consider using <a class="normal-link" target="_blank" href="https://www.airbnb.com/">Airbnb</a> or <a class="normal-link" target="_blank" href="http://www.vrbo.com/">Vrbo</a>.</p>
+                <p>Please consider booking accommodations <span class="underline"><strong>as soon as possible</strong></span> since there are several other events in the area on our wedding date. The bride and groom will be staying at the ranch, but recommend the following accommodations.</p>
                 <p>Note that most hotels require a two-night minimum stay.</p>
+            </div>
+            <div class="col-sm-4">
+                <a target="_blank" href="http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1524&mode=command&command=bookingrequestform&hotel_id=1524&package_id=106816&date_from=20161014&date_to=20161016">
+                    <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='blue-sky-lodge.jpg') }}" alt="blue-sky-lodge">
+                </a>
+                    <h2>Blue Sky Lodge</h2>
+                    <p>
+                        $
+                    <br>
+                        0.8 miles from Holman Ranch
+                    <br>    
+                        Reference access code “KMWEDD” for discounted rates at booking
+                    <br>
+                        (831) 659-2256
+                    </p>
             </div>
             <div class="col-sm-4">
                 <a target="_blank" href="http://loslaureles.com/">
@@ -159,6 +173,21 @@
                         (831) 659-2233
                     </p>
             </div>
+            <div class="col-sm-4">
+                <a target="_blank" href="http://www.valleylodge.com/">
+                    <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='carmel-valley-lodge-pool.jpg') }}" alt="carmel-valley-lodge">
+                </a>
+                    <h2>Carmel Valley Lodge</h2>
+                    <p>
+                        $$
+                    <br>
+                        1.4 miles from Holman Ranch
+                    <br>
+                        (831) 659-2261
+                    </p>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-4">
                 <a target="_blank" href="http://www.bernarduslodge.com/">
                     <img class="img-circle img-responsive img-center" src="static/bernardus.jpg" alt="bernardus-lodge-and-spa">
@@ -185,9 +214,6 @@
                         (855) 687-7262
                     </p>
             </div>
-        </div>
-        <!-- /.row -->
-        <div class="row">
             <div class="col-sm-4">
                 <a target="_blank" href="https://gc.synxis.com/rez.aspx?Hotel=58674&Chain=14839&arrive=10/14/2016&depart=10/16/2016&adult=1&child=0&group=47856">
                     <img class="img-circle img-responsive img-center" src="static/quail-lodge.png" alt="quail-lodge-and-golf-club">
@@ -204,6 +230,9 @@
                     </p>
                 </a>
             </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
             <div class="col-sm-4">
                 <a target="_blank" href="https://aws.passkey.com/event/14276473/owner/4475/home">
                     <img class="img-circle img-responsive img-center" src="static/hyatt.jpg" alt="hyatt-regency-monterey">
@@ -218,7 +247,6 @@
                     <br>
                         (888) 421-1442
                     </p>
-
             </div>
             <div class="col-sm-4">
                 <a target="_blank" href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/M/MRYMHGI-MPWED-20161014/index.jhtml#reservation">
@@ -237,6 +265,19 @@
                         (831) 373-6141
                     </p>
             </div>
+            <div class="col-sm-4">
+                <a data-toggle="modal" data-target="#rentalsModal">
+                    <div class="other-lodging-options-circle">
+                        <img class="img-responsive img-center" src="{{ url_for('static', filename='rentals-icon.png') }}" alt="rentals">
+                    </div>
+                </a>
+                    <h2>Nearby Rentals</h2>
+                    <p>
+                        $$ - $$$$
+                    <br>
+                        A list of nearby VRBO and Airbnb homes
+                    </p>
+            </div>
         </div>
         <!-- /.row -->
 
@@ -246,19 +287,22 @@
 
         <hr>
 
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
+            <div class="modal fade" id="rentalsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 class="modal-title" id="myModalLabel">Nearby Rentals</h4>
                   </div>
                   <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="container">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
