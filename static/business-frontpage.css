@@ -72,6 +72,7 @@ a:hover {
 
 .progress-bar {
     border-radius: 25px;
+    background-color: #74a4bc;
 }
 
 .air-travel-text {
@@ -124,6 +125,52 @@ a:hover {
 }
 
 .other-lodging-options-circle img {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.test-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.rental-img {
+    display: inline-block;
+}
+
+.rental-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rental-container img {
+    opacity: .85;
+}
+
+.rental-container:hover img {
+    opacity: 1;
+}
+
+.rental-container:hover {
+    color: #5A54a4;
+}
+
+.transportation {
+    margin-bottom: 30px;
+}
+
+
+
+@media (max-width: 992px) {
+    .other-lodging-options-circle {
+        height: 218px;
+        width: 218px;
+    }
+
+    .other-lodging-options-circle img {
+        max-width: 150px;
+        max-height: 1500px;
+    }
 }

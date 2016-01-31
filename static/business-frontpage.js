@@ -34,6 +34,16 @@ var hotelLocations = [
     "name" : "Los Laureles",
     "coordinates" : {lat: 36.494394, lng: -121.7483371},
     "infowindow" : "<a target='_blank' href='http://www.loslaureles.com'>Los Laureles</a>"
+  },
+  {
+    "name" : "Blue Sky Lodge",
+    "coordinates" : {lat: 36.478472, lng: -121.729574},
+    "infowindow" : "<a target='_blank' href='http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1524&mode=command&command=bookingrequestform&hotel_id=1524&package_id=106816&date_from=20161014&date_to=20161016'>Blue Sky Lodge</a>"
+  },
+  {
+    "name" : "Carmel Valley Lodge",
+    "coordinates" : {lat: 36.483929, lng: -121.738865},
+    "infowindow" : "<a target='_blank' href='http://www.valleylodge.com/'>Carmel Valley Lodge</a>"
   }
 ]
 
