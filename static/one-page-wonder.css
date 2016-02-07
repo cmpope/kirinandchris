@@ -164,10 +164,6 @@ footer {
 }
 
 @media(max-width:768px) {
-    .container {
-        margin: 0 15px;
-    }
-
     #overlay-words {
         width: inherit;
     }
