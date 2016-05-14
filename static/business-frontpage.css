@@ -1,0 +1,176 @@
+/*!
+ * Start Bootstrap - Business Frontpage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.business-header {
+    height: 400px;
+    background: url('holman-ranch.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.col-sm-4 {
+    margin-top: 10px;
+}
+
+.col-sm-4 img{
+  opacity: .85;
+}
+
+.col-sm-4:hover img{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.map-wrapper {
+    margin-top: 20px;
+}
+
+a {
+    color: black;
+}
+
+.normal-link {
+    color: #337ab7;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.progress-custom {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 25px;
+    background-color: #74a4bc;
+}
+
+.air-travel-text {
+    text-align: center;
+    font-size: 15px;
+}
+
+.shuttle-service-text {
+    padding-left: 10px;
+}
+
+#airport-map {
+    width: 70%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#hotel-map {
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.tagline {
+    padding-left: 5%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.other-lodging-options-circle {
+    width: 300px;
+    height: 300px;
+    background-color: #65C6BB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.other-lodging-options-circle img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.test-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.rental-img {
+    display: inline-block;
+}
+
+.rental-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rental-container img {
+    opacity: .85;
+}
+
+.rental-container:hover img {
+    opacity: 1;
+}
+
+.rental-container:hover {
+    color: #5A54a4;
+}
+
+.transportation {
+    margin-bottom: 30px;
+}
+
+
+
+@media (max-width: 992px) {
+    .other-lodging-options-circle {
+        height: 218px;
+        width: 218px;
+    }
+
+    .other-lodging-options-circle img {
+        max-width: 150px;
+        max-height: 1500px;
+    }
+}

@@ -1,0 +1,84 @@
+/*!
+ * Start Bootstrap - Portfolio Item HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.image-description {
+  margin-top: 35px;
+}
+
+.highlight-image {
+  margin: auto;
+  width: 750px;
+}
+
+h5.portfolio-item {
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+
+.portfolio-item{
+  opacity: .75;
+
+}
+
+.portfolio-item:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.highlight-thumbs {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.highlight-thumbs > img {
+  width: 100px;
+  cursor: pointer;
+}
+
+@media(max-width:400px) {
+  .highlight-thumbs > img {
+    width: 72px;
+  }
+
+}
+
+.highlight-thumbs-click {
+  background-color: grey;
+}
+
+.image {
+  display: inline-block;
+  position: relative;
+}
+
+.image img {
+  display: block;
+}
+
+.overaly {
+  position: absolute;
+}
+
+.thumb-description-style {
+  margin-bottom: 2px;
+  margin-top: 1px;
+}
+
+

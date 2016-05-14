@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
@@ -8,12 +8,17 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from models import Party, Guests
+import models
 
 
 @app.route('/')
-def hello():
-    return "Hello World!"
+def index():
+    return render_template('index.html')
+
+
+@app.route('/rsvp')
+def rsvp():
+    return render_template('rsvp.html')
 
 
 @app.route('/<name>')

@@ -4,7 +4,6 @@ class Party(db.Model):
     __tablename__ = 'party'
 
     id = db.Column(db.Integer, primary_key=True)
-    #party_ID = db.Column(db.Integer)
     guests = db.relationship('Guests', backref='party',
                                 lazy='dynamic')
     address = db.Column(db.String(228))
