@@ -24,7 +24,19 @@
   </div>
 </div>
 <div class="row">
-  <h1>{% if postal %} {{ postal }} {% endif %}</h1>
+  {% if check %}
+    {{ check }}
+  {% endif %}
+  {% if g %}
+    <h1>Please RSVP for the members in your Party at this Addresss:</h1>
+    <h3>{{ q.address }}</h3>
+    <ul>
+      {% for item in g %}
+        <h2><li>{{ item.first_name }} {{item.last_name}}</li><h2>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {# <h1>{% if postal %} {{ postal }} {% endif %}</h1> #}
   <h1>{% if error %} {{ error }} {% endif %}</h1>
 </div>
 {% endblock page_content %}
