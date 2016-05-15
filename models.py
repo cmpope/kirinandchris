@@ -38,7 +38,7 @@ class Guests(db.Model):
 
 
     def __init__(self, party_id, first_name, last_name, email, attending, dietary_restrictions):
-        self.party_ID = party_ID
+        self.party_id = party_id
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
