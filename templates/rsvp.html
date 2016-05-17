@@ -2,10 +2,14 @@
 
 {% block head %}
 <title>RSVP</title>
+<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='rsvp.css') }}">
 {% endblock head %}
 
 {% block page_content %}
-<div class="row">
+<div class="row title">
   <h1>RSVP</h1>
 </div>
 <div class="row">
@@ -16,15 +20,87 @@
         {{ message }}
       </div>
     {% endfor %}
-    <form role="form" method="POST" action="/rsvp">
-      {{ addressForm.csrf_token }}
-      {{ addressForm.address.label }} {{ addressForm.address() }}
-      {{ addressForm.submit() }}
-    </form>
+    <div class="address-form">
+{#       <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Please Enter the Address on Your Invite...</label>
+        </div>
+      </form> #}
+
+      <form role="form" method="POST" action="/rsvp">
+        {{ addressForm.csrf_token }}
+        {{ addressForm.address.label }} {{ addressForm.address() }}
+        {{ addressForm.submit() }}
+      </form>
+    </div>
   </div>
 </div>
 <div class="row">
-  {% if check %}
+  <div class="col-sm-12">
+    <div class="address-lookup-response">
+      {% if check %}
+        <h6>Did you mean this address?</h6>
+        <a id="confirm-address"><h6>{{ x[0] }}</h6></a>
+      {% elif g %}
+        <h6>Success!</h6>
+        <h6>Please RSVP for the members in your Party at this Addresss:</h6>
+        <h6><em>{{ q.address }}</em></h6>
+      {% else %}
+        <h6>{% if error %} {{ error }} {% endif %}</h6>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+<div class="row">
+  {% if g %}
+    <div class="table-container">
+      <table class="table responsive mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Name</th>
+            <th>Attending?</th>
+            <th>Dietary Restrictions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in g %}
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">{{ item.first_name }} {{ item.last_name }}</td>
+              <td>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="{{ item.id }}">
+                  <input type="checkbox" id="{{ item.id }}" class="mdl-switch__input">
+                  <span class="mdl-switch__label"></span>
+                </label>
+              </td>
+              <td>
+  {#               <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="{{ item.id }}">
+                  <input type="checkbox" id="{{ item.id }}" class="mdl-switch__input">
+                  <span class="mdl-switch__label"></span>
+                </label> #}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+{#   <div class="col-sm-5">
+    <ul>
+      {% for item in g %}
+        <h2><li>{{ item.first_name }} {{item.last_name}}</li><h2>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-sm-5">
+    <ul>
+      {% for item in g %}
+        <h4><li>{{ item.first_name }} {{item.last_name}}</li><h4>
+      {% endfor %}
+    </ul>
+  </div> #}
+{#   {% if check %}
     {{ check }}
   {% endif %}
   {% if g %}
@@ -35,8 +111,38 @@
         <h2><li>{{ item.first_name }} {{item.last_name}}</li><h2>
       {% endfor %}
     </ul>
-  {% endif %}
+  {% endif %} #}
   {# <h1>{% if postal %} {{ postal }} {% endif %}</h1> #}
-  <h1>{% if error %} {{ error }} {% endif %}</h1>
 </div>
+{% if g %}
+<div class="row">
+  <div class="col-sm-12 table-container">
+    <button id="menu-speed" class="mdl-button mdl-js-button mdl-button--raised">
+      Where Will You Be Staying? <i class="material-icons">expand_more</i>
+    </button>
+    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="menu-speed">
+      <li id="blue-sky-lodge" class="mdl-menu__item">Blue Sky Lodge</li>
+      <li id="los-laureles" class="mdl-menu__item">Los Laureles</li>
+      <li id="carmel-valley-lodge" class="mdl-menu__item">Carmel Valley Lodge</li>
+      <li id="bernardus" class="mdl-menu__item">Bernardus Lodge & Spa</li>
+      <li id="carmel-valley-ranch" class="mdl-menu__item">Carmel Valley Ranch</li>
+      <li id="quail-lodge-and-golf-club" class="mdl-menu__item">Quail Lodge & Golf Club</li>
+      <li id="hyatt-regency-monterey" class="mdl-menu__item">Hyatt Regency Monterey</li>
+      <li id="hilton-garden-inn-monterey" class="mdl-menu__item">Hilton Garden Inn Monterey</li>
+      <li id="rental" class="mdl-menu__item">Airbnb/Rental</li>
+      <li id="other" class="mdl-menu__item">Other</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="table-container">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><i class="material-icons">navigate_next</i></button>
+  </div>
+</div>
+{% endif %}
 {% endblock page_content %}
+  
+{% block scripts %} 
+  <script type="text/javascript" src="{{ url_for('static', filename='rsvp.js') }}"></script>
+{% endblock scripts %}

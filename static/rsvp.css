@@ -1,0 +1,24 @@
+.title {
+  text-align: center;
+}
+
+.address-form {
+  display: flex;
+  justify-content: center;
+}
+
+.address-lookup-response {
+  display: flex-wrap;
+  justify-content: center;
+  text-align: center; 
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+#confirm-address {
+  cursor: pointer;
+}
