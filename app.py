@@ -40,13 +40,13 @@ def rsvp(**kwargs):
     if addressForm.validate_on_submit():
         address = addressForm.address.data
         x = process.extractOne(address, all_addresses)
-        if kwargs:
-            if kwargs['name'] == 'confirm-address':
-                x[1] = 100
-                print x[1]
-                address = x[0]
-                print address
-        elif x[1] == 100:
+        # if kwargs:
+        #     if kwargs['name'] == 'confirm-address':
+        #         x[1] = 100
+        #         print x[1]
+        #         address = x[0]
+        #         print address
+        if x[1] == 100:
             q = models.Party.query.filter_by(address=address).first()
             g = models.Guests.query.filter_by(party_id=q.id).all()
             addressForm.address.data = ''
