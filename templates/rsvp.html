@@ -47,9 +47,11 @@
         <h6>Please RSVP for the members in your Party at this Addresss:</h6>
         <h6><em>{{ q.address }}</em></h6>
       {% else %}
-        <h6>{% if error %} {{ error }} {% endif %}</h6>
+      {% if error %} 
+          <h6>Sorry, we don't recognize that address.</h6> 
+          <h6>Please re-enter your address as it appears on your invite.</h6> 
       {% endif %}
-
+      {% endif %}
     </div>
   </div>
 </div>

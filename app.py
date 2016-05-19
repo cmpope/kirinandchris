@@ -27,25 +27,26 @@ def rsvp(**kwargs):
         all_addresses.append(x.address)
     addressForm = AddressForm()
     address = None
-    print address
-    print kwargs
     postal = None
     check = False
-    error = None
+    error = False
     full_name = None
     name = None
     g = []     
     q = None
     x = None
-    if addressForm.validate_on_submit():
+    if kwargs:
+        address = kwargs['address']
+        print 'This is the address', address
+        a = str(address)
+        print type(a)
+        print a
+        q = models.Party.query.filter_by(address=a).first()
+        g = models.Guests.query.filter_by(party_id=q.id).all()
+        addressForm.address.data = ''
+    elif addressForm.validate_on_submit():
         address = addressForm.address.data
         x = process.extractOne(address, all_addresses)
-        # if kwargs:
-        #     if kwargs['name'] == 'confirm-address':
-        #         x[1] = 100
-        #         print x[1]
-        #         address = x[0]
-        #         print address
         if x[1] == 100:
             q = models.Party.query.filter_by(address=address).first()
             g = models.Guests.query.filter_by(party_id=q.id).all()
@@ -53,15 +54,14 @@ def rsvp(**kwargs):
         elif 85 < x[1] < 100:
             check = True
         else:
-            error = "Sorry, we don't recognize that address. Please enter your address as it appears on your invite"
+            error = True
     return render_template('rsvp.html', addressForm=addressForm, addres=address, postal=postal, full_name=full_name, g=g, q=q, x=x, check=check, error=error)
 
 
-@app.route('/api/<name>', methods=['GET', 'POST'])
-def api(name):
-    if name == 'confirm-address':
-        rsvp(name=name)
-        return "Success"
+@app.route('/api/confirm-address/<address>', methods=['GET', 'POST'])
+def confirm_address_api(address):
+    rsvp(address=address)
+    return "Success"
 
 
 @app.route('/<name>')
