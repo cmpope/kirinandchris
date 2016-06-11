@@ -58,10 +58,26 @@ def rsvp(**kwargs):
     return render_template('rsvp.html', addressForm=addressForm, addres=address, postal=postal, full_name=full_name, g=g, q=q, x=x, check=check, error=error)
 
 
-@app.route('/api/confirm-address/<address>', methods=['GET', 'POST'])
-def confirm_address_api(address):
-    rsvp(address=address)
-    return "Success"
+@app.route('/api/confirm-address', methods=['GET', 'POST'])
+def confirm_address_api():
+    # rsvp(address=address)
+    if request == "POST":
+        r = request
+        print r
+    return rsvp()
+
+@app.route('/rsvp/update', methods=['POST'])
+def rsvp_update():
+    if request == "POST":
+        r = request
+        print request
+    return index()
+
+@app.route('/rsvp/admin')
+def rsvp_adim():
+    party = models.Party.query.all()
+    guests = models.Guests.query.all()
+    return render_template('rsvp-admin.html', party=party, guests=guests)
 
 
 @app.route('/<name>')
