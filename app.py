@@ -68,9 +68,17 @@ def confirm_address_api():
 
 @app.route('/rsvp/update', methods=['POST'])
 def rsvp_update():
-    if request == "POST":
-        r = request
-        print request
+    if request.method == "POST":
+        r = request.get_json()
+        for x in r:
+            g = models.Guests.query.filter_by(id=x['gid']).first()
+            g.attending = x['attending']
+            print g.attending
+            g.dietary_restrictions = x['dietary_restrictions']
+            print g.dietary_restrictions
+            db.session.commit()
+    else:
+        print "i suck"
     return index()
 
 @app.route('/rsvp/admin')

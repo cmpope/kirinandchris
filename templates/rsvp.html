@@ -72,25 +72,25 @@
           </thead>
           <tbody>
             {% for item in g %}
-              <tr>
-                <td class="mdl-data-table__cell--non-numeric">{{ item.first_name }} {{ item.last_name }}</td>
+              <tr gid="{{ item.id }}">
+                <td gid="{{ item.id }}" class="mdl-data-table__cell--non-numeric">{{ item.first_name }} {{ item.last_name }}</td>
                 <td class="toggle-ctn">
                   <div class="toggle-container">
                     <div class="toggle-center">
                       <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect attending" for="{{ item.id }}">
-                        <input type="checkbox" id="{{ item.id }}" class="mdl-switch__input">
+                        <input type="checkbox" gfield="attending" gid="{{ item.id }}" id="{{ item.id }}" class="mdl-switch__input">
                         <span class="mdl-switch__label"></span>
                       </label>
                     </div>
                   </div>
                 </td>
                 <td>
-                  <select gid="{{ item.id }}" class="selectpicker" data-width="120px">
-                    <option>None</option>
-                    <option>Kosher</option>
-                    <option>Gluten Free</option>
-                    <option>Vegan</option>
-                    <option>Nut-allergies</option>
+                  <select gfield="dietary_restrictions" gid="{{ item.id }}" class="selectpicker" data-width="120px">
+                    <option value="none">None</option>
+                    <option value="kosher">Kosher</option>
+                    <option value="gluten_free">Gluten Free</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="nut-allergies">Nut-allergies</option>
                   </select>
                 </td>
               </tr>
@@ -121,30 +121,9 @@
     </div>
   </div>
 
-
-{#   <div class="row">
-    <div class="col-sm-12 table-container">
-      <button id="menu-speed" class="mdl-button mdl-js-button mdl-button--raised">
-        Where Will You Be Staying? <i class="material-icons">expand_more</i>
-      </button>
-      <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="menu-speed">
-        <li id="blue-sky-lodge" class="mdl-menu__item">Blue Sky Lodge</li>
-        <li id="los-laureles" class="mdl-menu__item">Los Laureles</li>
-        <li id="carmel-valley-lodge" class="mdl-menu__item">Carmel Valley Lodge</li>
-        <li id="bernardus" class="mdl-menu__item">Bernardus Lodge & Spa</li>
-        <li id="carmel-valley-ranch" class="mdl-menu__item">Carmel Valley Ranch</li>
-        <li id="quail-lodge-and-golf-club" class="mdl-menu__item">Quail Lodge & Golf Club</li>
-        <li id="hyatt-regency-monterey" class="mdl-menu__item">Hyatt Regency Monterey</li>
-        <li id="hilton-garden-inn-monterey" class="mdl-menu__item">Hilton Garden Inn Monterey</li>
-        <li id="rental" class="mdl-menu__item">Airbnb/Rental</li>
-        <li id="other" class="mdl-menu__item">Other</li>
-      </ul>
-    </div>
-  </div> #}
-
   <div class="row">
     <div class="submit table-container">
-      <input class="btn btn-primary" type="submit" value="Submit">
+      <input id="submitInfo" class="btn btn-primary" type="submit" value="Submit">
     </div>
   </div>
 
