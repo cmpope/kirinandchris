@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='round-about.css') }}">
+    <title>Kirin and Chris' Wedding Party</title>
+{% endblock %}
+
+{% block page_content %}
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Wedding Party Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">The Wedding Party
+                    <small>Meet Our Team</small>
+                </h2>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/christine-woodin-1.JPG" alt="kirin-mysorewala-christine-woodin-maid-of-honor">
+                <h3>Christine Woodin
+                    <small>Maid of Honor</small>
+                </h3>
+                <p>Christine and I met and became friends during high school. After graduating, we both went to college in L.A. (Christine to Caltech and me to LMU…basically the same thing), met boyfriends from the South Bay Area, and are now getting married one month apart from each other. Christine currently lives in Austin and although we are not geographically close, we talk everyday. I’m so proud of everything she has accomplished, and the way she carries herself has always served as a silent motivator for me. I’ve never met anyone with her level of humility and maturity, and I’m so grateful that she is such a big part of my life.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/kevin-brashear.jpg" alt="chris-pope-kevin-brashear-best-man">
+                <h3>Kevin Brashear
+                    <small>Best Man</small>
+                </h3>
+                <p>Kevin and I met in the 1st grade while attending St. Christopher elementary school. What attracted me most to Kevin was his dry humor and alternative interests. While most kids were buying Blink 182 CDs, Kevin introduced me to classic rock and helped me pick out my first Led Zeppelin and Pink Floyd CDs. Our friendship grew stronger as we grew older continuing through Bellarmine College Preparatory (high school) and even stayed close when we went our separate ways to college (Kevin to USC and me to LMU). One of my favorite memories with Kevin is attending the recording of Daniel Tosh’s Completely Serious standup in Orange County with Kelsey Miller. We sat in the first row and made one or two of the audience shots in the video which can be seen here: <a target="_blank" href="https://goo.gl/gmOvju">https://goo.gl/gmOvju</a></p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/katie-pope.JPG" alt="kirin-mysorewala-katie-pope-bridesmaid">
+                <h3>Katie Pope
+                    <small>Bridesmaid</small>
+                </h3>
+                <p>Katie and I met when she joined Pi Beta Phi in 2009 - she was actually the first member of the Pope family I met, including Chris. Katie was one of the most beloved people in our sorority and I feel fortunate that I had the unique opportunity of getting to know her as a friend first, and then as a family member. She has this indescribable energy and can make anyone smile without even trying. I always look forward to spending time with her during holidays and family vacations and am extremely lucky that Chris has a sister that I get along with so well. It feels like she has been family for awhile now, but I’m thrilled to be making it official.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/adam-mysorewala.jpg" alt="chris-pope-adam-mysorewala-groomsman">
+                <h3>Adam Mysorewala
+                    <small>Groomsman</small>
+                </h3>
+                <p>Adam is Kirin’s brother and I am happy to finally have another brother in the family. When I first met Adam he was a Senior at Miramonte high school getting ready to head off to Wake Forest to study Business and Economics. One memory with Adam that I will never forget was the 2012 NFC Championship Game in Atlanta. I went to the NFC Divisional playoff game versus the Packers and almost immediately after the 49ers won, Kirin called me and asked if I wanted to go to Atlanta for the next round. The game did not start out well but the 49ers made a second-half surge to take the lead and stop the Falcons inside the red zone to win the game. After the final whistle, Kirin, Amin, Adam and I managed to do a four-way jumping hug chanting “we’re going to the Super Bowl, we’re going to the Super Bowl..” Tears were shed and a great memory was made.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/meaghan-shanley.jpg" alt="kirin-mysorewala-meaghan-shanley-bridesmaid">
+                <h3>Meaghan Shanley
+                    <small>Bridesmaid</small>
+                </h3>
+                <p>Meaghan and I met in a philosophy class at LMU in 2008, when we discovered that she had just joined my sorority. After college, she moved to San Francisco, and our semi-weekly meet-ups have become one of the things I look forward to most. Her roommates make fun of us because we spend most of our time together eating in her bed and watching Pretty Little Liars, but this routine is always one of the highlights of my week. Meaghan takes her friendships very seriously and is one of the most loyal people I know. When you meet her, you can instantly tell how strongly she stands by the people in her life, and I feel so lucky to be one of them.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/nick-owen.jpg" alt="chris-pope-nick-owen-groomsman">
+                <h3>Nick Owen
+                    <small>Groomsman</small>
+                </h3>
+                <p>Nick and I met playing volleyball in high school for Bay to Bay (a club volleyball team). Even though we met on the volleyball court, I think we truly connected in our shared love for the San Jose Sharks. I vividly remember challenging Nick to a game where we alternated naming as many Sharks players as we could. The game went on for a while but it became clear very quickly that I didn’t stand a chance against Nick’s encyclopedia-like memory of sports. Nick and I remained close in college and I even made it up to visit him at the University of Oregon a few times. When we both returned back to the Bay Area after school, it didn’t take long for us to join and then start a recreational hockey team. We’ve now been playing together for over 2 years on The Young Go-Hards and if you are ever free on a Sunday evening you can catch a game at Silver Creek Sportsplex.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/kelly-clements.jpg" alt="kirin-mysorewala-kelly-clements-bridesmaid">
+                <h3>Kelly Clements
+                    <small>Bridesmaid</small>
+                </h3>
+                <p>Kelly was one of the first people I met when I joined Pi Beta Phi in 2007. We were sitting next to each other at a seminar and she leaned over (not knowing me) and started whispering jokes. At that moment, I was hooked. She is incredibly easy-going, kind and accepting, and has a way of making everyone around her feel comfortable and happy. She lives in Phoenix now so we don’t see each other frequently, but when we do, we pick up right where we left off. I never laugh as much as I do when we are together and am excited for the new memories that this year will bring.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/joe-gutto.jpg" alt="chris-pope-joe-gutto-groomsman">
+                <h3>Joe Gutto
+                    <small>Groomsman</small>
+                </h3>
+                <p>Joe and I first met at Bellarmine (high school). We both played on Bellarmine’s JV and Varsity volleyball teams where we won the CCS Championship in 2005 (playoff bracket - <a target="_blank" href="http://goo.gl/oqKGmp">http://goo.gl/oqKGmp</a>). We both attended Loyola Marymount University, lived in the same dorm Sophomore year, and in the same house/apartment Junior and Senior years. Joe and I had many memorable experiences at LMU, but most notably, Joe was a brave wingman when he was willing to come with me on Kirin’s 21st birthday party, a wine-tasting party bus to Temecula, with a dozen girls he had not met before. On second thought, that doesn’t sound that daring or courageous, but regardless, this is a good example of how Joe has always been there to support me. P.S. If we’re lucky this guy will make an appearance - <a target="_blank" href="https://goo.gl/cDLDMe">https://goo.gl/cDLDMe</a></p>
+                <!-- <p>Favorite Memory: Another classic 49er game, 2011 NFC Division Playoff game against the Saints "Vernon Post"</p> -->
+            </div>
+        </div>
+        <div class="row">
+            <hr class="divider">
+
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/amin-kathleen-mysorewala.jpg" alt="kirin-mysorewala-amin-kathleen-mysorewala-parents-of-the-bride">
+                <h3>Kathleen Murphy and Amin Mysorewala
+                    <small>Parents of the Bride</small>
+                </h3>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/mike-vicki-pope-2.jpg" alt="chris-pope-mike-vicki-pope-parents-of-the-groom">
+                <h3>Vicki and Mike Pope
+                    <small>Parents of the Groom</small>
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/flower-girl.jpg" alt="kirin-mysorewala-flower-girl">
+                <h3>Auden Murphy
+                    <small>Flower Girl</small>
+                </h3>
+                <p>Step-sister of the Bride</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center section-spacing">
+                <img class="img-circle img-responsive img-center thumb" src="static/justin-oneill.jpg" alt="kirin-mysorewala-chris-pope-justin-oneill-officiant">
+                <h3>Justin O'Neill
+                    <small>Officiant</small>
+                </h3>
+                <p>Cousin of the Groom</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}

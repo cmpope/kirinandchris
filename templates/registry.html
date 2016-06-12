@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='registry.css') }}">
+    <title>Kirin and Chris Registry</title>
+  
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Registries
+                    <small></small>
+                </h1>
+            </div>
+        
+
+
+    <!--Placeholder for Registry store images-->
+            <div class="col-sm-6 col-xs-12">
+                <a target="_blank" href="https://www.zola.com/registry/kirinandchris">
+                    <img class="img-thumnail img-responsive portfolio-item" src="{{ url_for('static', filename='zola-logo.png') }}" alt="kirin-mysorewala-chris-pope-zola-registry">
+                </a>
+            </div>
+
+
+            <div class="col-sm-6 col-xs-12">
+                <a target="_blank" href="http://www.williams-sonoma.com/registry/kbp97nksb6/registry-list.html">
+                    <img class="img-responsive portfolio-item" src="{{ url_for('static', filename='Williams-Sonoma-logo.png') }}" alt="kirin-mysorewala-chris-pope-willams-sonoma-registry">
+                </a>
+            </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}

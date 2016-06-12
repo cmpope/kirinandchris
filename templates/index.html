@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='full.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <title>Kirin Mysorewala and Chris Pope Wedding Site - Home - kirinandchris.com</title>
+{% endblock %}
+
+{% block page_content %}
+    <ul class="cb-slideshow">
+      <li>
+        <span>Image 01</span>
+      </li>
+      <li>
+        <span>Image 02</span>
+      </li>
+      <li>
+        <span>Image 03</span>
+      </li>
+    </ul>
+
+  <div class="my-heading">
+    Kirin & Chris / 10.15.16 / Carmel Valley, CA
+  </div>
+  
+{% endblock %}
+
+{% block scripts %}
+  <!--<script type="text/javascript" src="{{ url_for ('static', filename='full.js') }}"></script>-->
+{% endblock %}
