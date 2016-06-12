@@ -1,0 +1,429 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='business-frontpage.css') }}">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="static/business-frontpage.js"></script>
+    <title>Kirin and Chris' Wedding Location</title>
+{% endblock %}
+
+{% block page_content %}
+
+<!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-casual.css file. -->
+    <header class="business-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">The Big Day</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <!--<h1>The Ceremony</h1>-->
+
+    <div class="container">
+
+        <hr>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <h2>Ceremony & Reception</h2>
+                <p>The ceremony and reception will be held at <a target="_blank" href="http://www.holmanranch.com">Holman Ranch</a> in Carmel Valley, California. The ceremony will begin at 4pm, so it is requested that you arrive on the property by <b>3:30pm.</b></p> 
+                <p>Upon arrival, go through the entrance gate and follow the single lane road past the stables. An attendant will indicate where to park and your group will be shuttled up to the ceremony site.</p>
+                <p>Following the reception, we invite you to join us and our families for drinks and late-night bites at <a target="_blank" href="http://wfrestaurant.com/">Will’s Fargo Steakhouse</a>.</p>
+                <p>Please be prepared to be outdoors for most of the evening.</p>
+                <h3>Questions?</h3>
+                <address>
+                    <abbr title="Phone">P:</abbr>(510) 290-6910 
+                    <br>
+                    <abbr title="Email">E:</abbr> <a href="mailto:#">info@kirinandchris.com</a>
+                </address>
+                <!--View photos button
+                <p>
+                    <a class="btn btn-default btn-lg" href="http://www.holmanranch.com">View Photos &raquo;</a>
+                </p>
+                -->
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <h2>Location</h2>
+                <address>
+                    <a target="_blank" href="https://www.google.com/maps/place/Holman+Ranch/@36.4819829,-121.7190045,17z/data=!3m1!4b1!4m2!3m1!1s0x808df47f844ebea9:0x1bf4d0b15792f623"><strong>Holman Ranch</strong></a>
+                    <br>60 Holman Rd. 
+                    <br>Carmel Valley, CA 93924
+                    <br>
+                </address>
+            <!--
+                <address>
+                    <abbr title="Phone">P:</abbr>(831) 659-2640
+                    <br>
+                    <abbr title="Email">E:</abbr> <a href="mailto:#">info@kirinandchris.com</a>
+                </address>
+            -->
+                <h5>Current Weather</h5>
+                <span id="theWeather"></span><a target="_blank" href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Carmel+Valley%2C+CA&MR=1"><img id="wicon" src=""><p id="wdesc" class="text-capitalize"></p></a>
+                <h5>Historical Averages on 10/15</h5>
+                <h6>Hi:<span id="temp_hi"></span></h6>
+                <h6>Lo:<span id="temp_lo"></span></h5>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+
+    <!--<h1>Transportation</h1>-->
+
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Transportation</h2>
+                <div class="transportation">
+                    <h4>Shuttle Service</h4>
+                    <p class="shuttle-service-text">Transportation will be provided to/from the Hyatt Regency Monterey & Los Laureles Lodge. Pick-up & drop-off schedules will be provided closer to the event.</p>
+                </div>
+                <div class="transportation">
+                    <h4>Parking, Ridesharing & Taxis</h4>
+                    <p>There is ample parking at Holman Ranch.  If you would prefer not to drive or take the shuttle, consider coordinating a taxi ride in advance. Uber drivers are available in Monterey (where the Hyatt Regency & Hilton Garden Inn are located) but are scarce in Carmel.
+                        <ul>                
+                            <li>Yellow Cab – (831) 333-1234</li>
+                            <li>Central Cost Cab Co – (831) 626-3333</li>
+                            <li>Monterey Bay Taxi  - (831) 869-1957</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="transportation">
+                    <h4>Airports</h4>
+                    <div class="row">    
+                        <div class="air-travel-text col-xs-2 col-sm-2">
+                            SFO
+                        </div>
+                        <div class="col-xs-10 col-sm-9 progress-custom">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                            113 miles to Carmel Valley
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">    
+                        <div class="air-travel-text col-xs-2 col-sm-2">
+                            OAK
+                        </div>
+                        <div class="col-xs-10 col-sm-9 progress-custom">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:89%">
+                            112 miles to Carmel Valley
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">    
+                        <div class="air-travel-text col-xs-2 col-sm-2">
+                            SJC
+                        </div>
+                        <div class="col-xs-10 col-sm-9 progress-custom">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:63%">
+                            80 miles to Carmel Valley
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">    
+                        <div class="air-travel-text col-xs-2 col-sm-2">
+                            MRY
+                        </div>
+                        <div class="col-xs-10 col-sm-9 progress-custom">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:12%">
+                            14 miles
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--<h1>Where to Stay</h1>-->
+
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Where to Stay</h2>
+                <p>Please consider booking accommodations <span class="underline"><strong>as soon as possible</strong></span> since there are several other events in the area on our wedding date. The bride and groom will be staying at the ranch, but recommend the following accommodations.</p>
+                <p>Note that most hotels require a two-night minimum stay.</p>
+            </div>
+            <div class="col-sm-4">
+                <a target="_blank" href="http://reservation.worldweb.com/Bookings-nr105/activity-edit.html?table=hotels&listing_id=1524&mode=command&command=bookingrequestform&hotel_id=1524&package_id=106816&date_from=20161014&date_to=20161016">
+                    <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='blue-sky-lodge.jpg') }}" alt="blue-sky-lodge">
+                </a>
+                    <h2>Blue Sky Lodge</h2>
+                    <p>
+                        $
+                    <br>
+                        0.8 miles from Holman Ranch
+                    <br>    
+                        Reference access code “KMWEDD” for discounted rates at booking
+                    <br>
+                        (831) 659-2256
+                    </p>
+            </div>
+            <div class="col-sm-4">
+                <a target="_blank" href="http://loslaureles.com/">
+                    <img class="img-circle img-responsive img-center" src="static/los-laureles.jpg" alt="los-laureles">
+                </a>
+                    <h2>Los Laureles</h2>
+                    <p>
+                        $
+                    <br>
+                        2.4 miles from Holman Ranch
+                    <br>    
+                        15 rooms have been blocked at $155-$245/night 
+                    <br>
+                        Book by phone and reference the Mysorewala/Pope Wedding 
+                    <br>
+                        (831) 659-2233
+                    </p>
+            </div>
+            <div class="col-sm-4">
+                <a target="_blank" href="http://www.valleylodge.com/">
+                    <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='carmel-valley-lodge-pool.jpg') }}" alt="carmel-valley-lodge">
+                </a>
+                    <h2>Carmel Valley Lodge</h2>
+                    <p>
+                        $$
+                    <br>
+                        1.4 miles from Holman Ranch
+                    <br>
+                        Book by phone and reference a Holman Ranch wedding for a discounted rate
+                    <br>
+                        (831) 659-2261
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <a target="_blank" href="http://www.bernarduslodge.com/">
+                    <img class="img-circle img-responsive img-center" src="static/bernardus.jpg" alt="bernardus-lodge-and-spa">
+                </a>
+                    <h2>Bernardus Lodge & Spa</h2>
+                    <p>
+                        $$$$
+                    <br>
+                        2.9 miles from Holman Ranch
+                    <br>
+                        (831) 658-3400
+                    </p>
+            </div>
+            <div class="col-sm-4">
+                <a target="_blank" href="http://www.carmelvalleyranch.com/">
+                    <img class="img-circle img-responsive img-center" src="static/carmel-valley-ranch.jpg" alt="carmel-valley-ranch">
+                </a>
+                    <h2>Carmel Valley Ranch</h2>
+                    <p>
+                        $$$
+                    <br>
+                        7.1 miles from Holman Ranch
+                    <br>
+                        (855) 687-7262
+                    </p>
+            </div>
+            <div class="col-sm-4">
+                <a target="_blank" href="https://gc.synxis.com/rez.aspx?Hotel=58674&Chain=14839&arrive=10/14/2016&depart=10/16/2016&adult=1&child=0&group=47856">
+                    <img class="img-circle img-responsive img-center" src="static/quail-lodge.png" alt="quail-lodge-and-golf-club">
+                </a>
+                    <h2>Quail Lodge & Golf Club</h2>
+                    <p>
+                        $$$
+                    <br>
+                        9.7 miles from Holman Ranch
+                    <br>
+                        20 rooms have been blocked at $485/night
+                    <br>
+                        (831) 624-2888
+                    </p>
+                </a>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-sm-4">
+                <a target="_blank" href="https://aws.passkey.com/event/14276473/owner/4475/home">
+                    <img class="img-circle img-responsive img-center" src="static/hyatt.jpg" alt="hyatt-regency-monterey">
+                </a>
+                    <h2>Hyatt Regency Monterey</h2>
+                    <p>
+                        $$
+                    <br>
+                        16.7 miles from Holman Ranch
+                    <br>
+                        10 rooms have been blocked at $289/night
+                    <br>
+                        (888) 421-1442
+                    </p>
+            </div>
+            <div class="col-sm-4">
+                <a target="_blank" href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/M/MRYMHGI-MPWED-20161014/index.jhtml#reservation">
+                    <img class="img-circle img-responsive img-center" src="{{ url_for('static', filename='hilton-garden-inn-monterey.jpg') }}" alt="hilton-garden-inn-monterey">
+                </a>
+                    <h2>Hilton Garden Inn Monterey</h2>
+                    <p>
+                        $$
+                    <br>
+                        17.3 miles from Holman Ranch
+                    <br>
+                        10 rooms have been blocked at $209/night
+                    <br>
+                        (831) 373-6141
+                    </p>
+            </div>
+            <div class="col-sm-4">
+                <a data-toggle="modal" data-target="#rentalsModal">
+                    <div class="other-lodging-options-circle img-center img-responsive">
+                        <img class="img-responsive img-center" src="{{ url_for('static', filename='rentals-icon.png') }}" alt="rentals">
+                    </div>
+                </a>
+                    <h2>Rental Homes</h2>
+                    <p>
+                        A list of nearby VRBO and Airbnb homes
+                    </p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row map-wrapper">
+            <div class="embed-responsive embed-responsive-16by9" id="hotel-map"></div>
+        </div>
+
+        <hr>
+
+            <div class="modal fade" id="rentalsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Rental Homes</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 rental-container">
+                            <div class="col-lg-6">
+                                <a target="_blank" href="https://www.vrbo.com/3543">
+                                    <img class="img-circle img-responsive rental-img" src="{{ url_for('static', filename='vrbo-3543.jpg') }}">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="rental-text">
+                                    <ul>
+                                        <li>Average rate - $624/night</li>
+                                        <li>Sleeps 10 – 3 bedroom/2 bath + guest house</li>
+                                        <li>Pool + hot tub</li>
+                                        <li>Approx. 2.0 miles from Holman Ranch</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 rental-container">
+                            <div class="col-lg-6">
+                                <a target="_blank" href="https://www.vrbo.com/222393">
+                                    <img class="img-circle img-responsive rental-img" src="{{ url_for('static', filename='vrbo-222393.jpg') }}">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="rental-text">
+                                    <ul>
+                                        <li>Average rate - $700/night</li>
+                                        <li>Sleeps 10 – 4 bedroom/3 bath</li>
+                                        <li>Pool + hot tub</li>
+                                        <li>Approx. 0.2 miles from Los Laureles pickup </li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 rental-container">
+                            <div class="col-lg-6">
+                                <a target="_blank" href="https://www.vrbo.com/445723">
+                                    <img class="img-circle img-responsive rental-img" src="{{ url_for('static', filename='vrbo-445723.jpg') }}">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="rental-text">
+                                    <ul>
+                                        <li>Average rate - $460/night</li>
+                                        <li>Sleeps 6 – 3 bedroom/2 bath</li>
+                                        <li>Pool + hot tub</li>
+                                        <li>Approx. 0.3 miles from Los Laureles shuttle pickup</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 rental-container">
+                            <div class="col-lg-6">
+                                <a target="_blank" href="https://www.vrbo.com/464577">
+                                    <img class="img-circle img-responsive rental-img" src="{{ url_for('static', filename='vrbo-464577.jpg') }}">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="rental-text">
+                                    <ul>
+                                        <li>Average rate - $575/night</li>
+                                        <li>Sleeps 9 – 4 bedroom/3.5 bath</li>
+                                        <li>Pool + hot tub</li>
+                                        <li>Approx. 2 miles from Holman Ranch</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 rental-container">
+                            <div class="col-lg-6">
+                                <a target="_blank" href="https://www.airbnb.com/rooms/3497603">
+                                    <img class="img-circle img-responsive rental-img" src="{{ url_for('static', filename='airbnb-3497603.png') }}">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="rental-text">
+                                    <ul>
+                                        <li>Average rate - $375/night</li>
+                                        <li>Sleeps 4 – 2 bedroom/3 bath</li>
+                                        <li>Pool</li>
+                                        <li>Approx. 2 miles from Holman Ranch</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 rental-container">
+                            <div class="col-lg-6">
+                                <a target="_blank" href="https://www.airbnb.com/rooms/4823921">
+                                    <img class="img-circle img-responsive rental-img" src="{{ url_for('static', filename='airbnb-4823921.png') }}">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="rental-text">
+                                    <ul>
+                                        <li>Average rate - $450/night</li>
+                                        <li>Sleeps 10 – 4 bedroom/3 bath</li>
+                                        <li>Pool + hot tub</li>
+                                        <li>Approx. 5 miles from Holman Ranch</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="static/wunderground.js"></script>
+{% endblock %}

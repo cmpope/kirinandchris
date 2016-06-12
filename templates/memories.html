@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='portfolio-item.css') }}">
+    <title>Kirin and Chris Memories</title>
+{% endblock %}
+
+{% block page_content %}
+
+<!-- Page Content -->
+    <div class="container">
+    <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Memories
+                    <small>Click or use your arrow keys to see some of the things we love</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div id="highlight" class="row">
+            <div id="vacations">
+                <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8">
+                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-hawaii-marketo-purple-label-society">
+                    
+                    <div class="highlight-thumbs">
+                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-hawaii-marketo-purple-label-society">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='mysorewala-family-vacation.JPG') }}" alt="kirin-mysorewala-chris-pope-mysorewala-family-vacation">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='fulton-ski-trip.JPG') }}" alt="kirin-mysorewala-chris-pope-fulton-ski-trip">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <h3>Vacations</h3>
+                    <p>We have been fortunate enough to share some incredible vacations. We’ve built lifelong memories in Palm Springs, Puerto Rico, Mexico, New York, Arizona and Las Vegas. However, our all-time favorite destinations are Hawaii and the Sonoma and Napa Valleys.</p>
+                    <div class="image-description">
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Marketo Purple Label Society</em></h5>
+                            <h5 class="thumb-description-style"><em>February 9, 2013 | Kailua-Kona, Hawaii</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Mysorewala Family Vacation</em></h5>
+                            <h5 class="thumb-description-style"><em>June 13, 2015 | Sonoma, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Fulton-Lambert Ski Trip</em></h5>
+                            <h5 class="thumb-description-style"><em>March 5, 2011 | Bear Valley, California</em></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tasting-beer">
+                <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8">
+                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='sierra-nevada-brewery.JPG') }}" alt="kirin-mysorewala-chris-pope-sierra-nevada-brewery">
+                    
+                    <div class="highlight-thumbs">
+                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='sierra-nevada-brewery.JPG') }}" alt="kirin-mysorewala-chris-pope-sierra-nevada-brewery">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='bear-republic-brewery-hd.jpg') }}" alt="kirin-mysorewala-chris-pope-bear-republic-brewery">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='firestone-walker-brewery-hd.JPG') }}" alt="kirin-mysorewala-chris-pope-firestone-walker-brewery">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <h3>Tasting Beer</h3>
+                    <p>We share a passion for great beer. Visiting breweries is one of our favorite things to do together. Some of our California favorites include Alesmith, Sierra Nevada, Russian River and Firestone Walker. Craving a good brew while you’re in town? Check out <a target="_blank" href="http://www.canneryrowbrewingcompany.com/">Cannery Row Brewing Company</a></p>
+                    <div class="image-description">
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Sierra Nevada Brewing Company</em></h5>
+                            <h5 class="thumb-description-style"><em>February 16, 2013 | Chico, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Bear Republic Brewing Company</em></h5>
+                            <h5 class="thumb-description-style"><em>August 18, 2013 | Healdsburg, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Firestone Walker Brewing Company</em></h5>
+                            <h5 class="thumb-description-style"><em>July 28, 2013 | Chico, California</em></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="sporting-events">
+                <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8">
+                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='49er-game-hd.JPG') }}" alt="kirin-mysorewala-chris-pope-49er-game">
+                    
+                    <div class="highlight-thumbs">
+                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='49er-game-hd.JPG') }}" alt="kirin-mysorewala-chris-pope-49er-game">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='giants-spring-training-hd.JPG') }}" alt="kirin-mysorewala-chris-pope-giants-spring-training">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='sharks-stadium-series-hd.JPG') }}" alt="kirin-mysorewala-chris-pope-sharks-stadium-series">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <h3>Sporting Events</h3>
+                    <p>We both grew up with families that are passionate about sports and we've enjoyed attending many sporting events throughout our relationship. Our favorite sports memories together include the 2013 NFC Championship in Atlanta, the final regular season game at Candlestick Park and the 2011 Cal vs. Stanford football game.</p>
+                    <div class="image-description">
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>San Francisco 49ers Farewell to Candlestick Game</em></h5>
+                            <h5 class="thumb-description-style"><em>December 24, 2013 | San Francisco, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>San Francisco Giants Spring Training</em></h5>
+                            <h5 class="thumb-description-style"><em>March 23, 2013 | Phoenix, Arizona</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>San Jose Sharks Stadium Series</em></h5>
+                            <h5 class="thumb-description-style"><em>February 21, 2015 | Santa Clara, California</em></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="weddings">
+                <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8">
+                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-jenny-wedding-hd.JPG') }}" alt="kirin-mysorewala-chris-pope-jenny-wedding">
+                    
+                    <div class="highlight-thumbs">
+                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='kirin-chris-jenny-wedding-hd.JPG') }}" alt="kirin-mysorewala-chris-pope-jenny-wedding">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-amin-wedding.jpg') }}" alt="kirin-mysorewala-chris-pope-amin-wedding">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-marla-wedding.jpg') }}" alt="kirin-mysorewala-chris-pope-marla-wedding">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <h3>Weddings</h3>
+                    <p>Some of our best memories have been from the weddings of our good friends and family. We are so grateful that we’ve been included in so many couples’ special day and are thrilled that you will be a part of ours.</p>
+                    <div class="image-description">
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Jamall-Kelly Wedding</em></h5>
+                            <h5 class="thumb-description-style"><em>June 15, 2013 | Berkeley, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Murphy-Mysorewala Wedding</em></h5>
+                            <h5 class="thumb-description-style"><em>May 27, 2011 | San Francisco, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Jensen-Dietz Wedding</em></h5>
+                            <h5 class="thumb-description-style"><em>June 21, 2014 | Lake Tahoe, California</em></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pebble-beach">
+                <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8">
+                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-att-pro-am.JPG') }}" alt="kirin-mysorewala-chris-pope-att-pro-am-golf-tournament">
+                    
+                    <div class="highlight-thumbs">
+                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='kirin-chris-att-pro-am.JPG') }}" alt="kirin-mysorewala-chris-pope-att-pro-am-golf-tournament">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-us-open-2010.JPG') }}" alt="kirin-mysorewala-chris-pope-us-open-2010">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-carmel-valley-ranch.JPG') }}" alt="kirin-mysorewala-chris-pope-carmel-valley-ranch">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <h3>Pebble Beach</h3>
+                    <p>One of our favorite places to go is Pebble Beach, which is why we chose to get married in the area. We love having coffee on the deck at the Pope house, playing card games at night and exploring nearby hiking trails (including the beautiful Point Lobos State Park featured on our landing page). Feel free <a href="mailto:info@kirinandchris.com"><strong>to reach out</strong></a> for suggestions on how to spend your weekend in town.</p>
+                    <div class="image-description">
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>2015 AT&T Pebble Beach Pro-Am</em></h5>
+                            <h5 class="thumb-description-style"><em>February 14, 2015 | Pebble Beach, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>2010 U.S. Open</em></h5>
+                            <h5 class="thumb-description-style"><em>June 18, 2010 | Pebble Beach, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Visiting Wedding Venues</em></h5>
+                            <h5 class="thumb-description-style"><em>September 6, 2015 | Carmel Valley, California</em></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lmu">
+                <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8">
+                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-lmu-graduation.jpg') }}" alt="kirin-mysorewala-chris-pope-lmu-graduation">
+                    
+                    <div class="highlight-thumbs">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-lmu-graduation.jpg') }}" alt="kirin-mysorewala-chris-pope-lmu-graduation">
+                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='kirin-chris-kirin-21st-birthday.jpg') }}" alt="kirin-mysorewala-chris-pope-kirin-21st-birthday">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-pi-phi-party.jpg') }}" alt="kirin-mysorewala-chris-pope-pi-phi-party">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <h3>Loyola Marymount</h3>
+                    <p>We met each other and many of our closest friends at LMU. It has been a great experience growing up together, but it is always fun looking back on how exciting it was when we first got to know each other in L.A. Staying close to our friends from school has been very important to us and we’re so excited to reunite with our favorite Lions this October!</p>
+                    <div class="image-description">
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Loyola Marymount Commencement Ceremony</em></h5>
+                            <h5 class="thumb-description-style"><em>May 8, 2010 | Los Angeles, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Kirin's 21st Birthday Party</em></h5>
+                            <h5 class="thumb-description-style"><em>July 11, 2009 | Temecula, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Pi Beta Phi Date Night</em></h5>
+                            <h5 class="thumb-description-style"><em>October 1, 2009 | Santa Monica, California</em></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="family">
+                <div class="col-lg-6 col-lg-offset-1 col-md-8 col-sm-8">
+                    <img class="highlight-image img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-family-point-lobos.JPG') }}" alt="kirin-mysorewala-chris-pope-att-pro-am-golf-tournament">
+                    
+                    <div class="highlight-thumbs">
+                        <img class="img-responsive img-thumbnail highlight-thumbs-click" src="{{ url_for('static', filename='kirin-chris-family-point-lobos.JPG') }}" alt="kirin-mysorewala-chris-pope-family-picture-at-point-lobos">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-family-amin-wedding.jpg') }}" alt="kirin-mysorewala-chris-pope-family-picture-at-amin-wedding">
+                        <img class="img-responsive img-thumbnail" src="{{ url_for('static', filename='kirin-chris-family-engagement-party.JPG') }}" alt="kirin-mysorewala-chris-pope-family-picture-engagment-party">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm4">
+                    <h3>Family</h3>
+                    <p>We spend a lot of our free time with our families and feel so lucky to be surrounded by such incredible people. We love traveling and attending events with our parents, but our favorite memories come from watching football at the Mysorewala house and relaxing and playing card games with the Pope family. We are so thankful for each of you and your support in getting us here today.</p>
+                    <div class="image-description">
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Pope Family Hike</em></h5>
+                            <h5 class="thumb-description-style"><em>August 1, 2015 | Carmel-By-The-Sea, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Murphy-Mysorewala Wedding</em></h5>
+                            <h5 class="thumb-description-style"><em>May 27, 2011 | San Francisco, California</em></h5>
+                        </div>
+                        <div class="thumb-description">
+                            <h5 class="thumb-description-style"><em>Our Engagement Party</em></h5>
+                            <h5 class="thumb-description-style"><em>September 26, 2015 | Oakland, California</em></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header"></h3>
+            </div>
+
+            <div id="vacations-thumb" class="other-memories col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='hawaii-pls-2013.JPG') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-hawaii">
+                </a>
+            </div>
+
+            <div id="tasting-beer-thumb" class="other-memories col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='sierra-nevada-brewery.JPG') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-sierra-nevada-brewery">
+                </a>
+            </div>
+
+            <div id="sporting-events-thumb" class="other-memories col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='49er-game.JPG') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-49er-game">
+                </a>
+            </div>
+
+            <div id="weddings-thumb" class="other-memories col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='kirin-chris-jenny-wedding.jpg') }}" alt="kirin-mysorewala-chris-pope-wedding-memories-jenny-wedding">
+                </a>
+            </div>
+
+            <div id="pebble-beach-thumb" class="other-memories col-md-3 col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='kirin-chris-att-pro-am.JPG') }}" alt="kirin-mysorewala-chris-pope-pebble-beach-pro-am">
+                </a>
+            </div>
+
+            <div id="lmu-thumb" class="other-memories col-md-3 col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='kirin-chris-lmu-graduation.jpg') }}" alt="kirin-mysorewala-chris-pope-lmu-graduation">
+                </a>
+            </div>
+
+            <div id="family-thumb" class="other-memories col-md-3 col-sm-3 col-xs-6">
+                <a href="#">
+                    <img class="img-responsive img-thumbnail portfolio-item" src="{{ url_for('static', filename='kirin-chris-family-point-lobos.JPG') }}" alt="kirin-mysorewala-chris-pope-family-pictures-point-lobos">
+                </a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="static/portfolio-item.js"></script>
+{% endblock %}
