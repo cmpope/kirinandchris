@@ -12,12 +12,11 @@ class Party(db.Model):
     postal = db.Column(db.String(50))
     accommodations = db.Column(db.String(228))
 
-    def __init__(self, address, city, state, postal, accommodations):
+    def __init__(self, address, city, state, postal):
         self.address = address
         self.city = city
         self.state = state
         self.postal = postal
-        self.accommodations = accommodations
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -37,13 +36,11 @@ class Guests(db.Model):
 
 
 
-    def __init__(self, party_id, first_name, last_name, email, attending, dietary_restrictions):
+    def __init__(self, party_id, first_name, last_name, email):
         self.party_id = party_id
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
-        self.attending = attending
-        self.dietary_restrictions = dietary_restrictions
 
     def __repr__(self):
         return '<id {}>'.format(self.id)

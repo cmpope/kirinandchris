@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
+  <title>RSVP ADMIN</title>
   <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='rsvp-admin.css') }}">
@@ -23,18 +24,22 @@
               <th class="mdl-data-table__cell--non-numeric">Name</th>
               <th>Attending?</th>
               <th>Dietary Restrictions</th>
+              <th>Accommodations</th>
             </tr>
           </thead>
           <tbody class="list">
             {% for item in guests %}
               <tr>
-                <td>{{ item.address }}</td>
+                <td>{{ item.party.address }}</td>
                 <td class="mdl-data-table__cell--non-numeric">{{ item.first_name }} {{ item.last_name }}</td>
                 <td>
                   {{ item.attending }}
                 </td>
                 <td>
                   {{ item.dietary_restrictions }}
+                </td>
+                <td>
+                  {{ item.party.accommodations }}
                 </td>
               </tr>
             {% endfor %}

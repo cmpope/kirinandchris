@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='rsvp.css') }}">
 {% endblock head %}
@@ -23,18 +24,18 @@
       </div>
     {% endfor %}
     <div class="address-form">
-{#       <form action="#">
+      <form id="addressLookup" role="form" method="POST" action="/rsvp">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sample3">
+          <input class="mdl-textfield__input" name="address" type="text" id="sample3">
           <label class="mdl-textfield__label" for="sample3">Please Enter the Address on Your Invite...</label>
         </div>
-      </form> #}
+      </form>
 
-      <form role="form" method="POST" action="/rsvp">
+{#       <form id="addressLookup" role="form" method="POST" action="/rsvp">
         {{ addressForm.csrf_token }}
         {{ addressForm.address.label }} {{ addressForm.address() }}
         {{ addressForm.submit() }}
-      </form>
+      </form> #}
     </div>
   </div>
 </div>
@@ -77,20 +78,21 @@
                 <td class="toggle-ctn">
                   <div class="toggle-container">
                     <div class="toggle-center">
-                      <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect attending" for="{{ item.id }}">
+{#                       <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect attending" for="{{ item.id }}">
                         <input type="checkbox" gfield="attending" gid="{{ item.id }}" id="{{ item.id }}" class="mdl-switch__input">
                         <span class="mdl-switch__label"></span>
-                      </label>
+                      </label> #}
+                      <input gid="{{ item.id }}" gfield="attending" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" {% if item.attending %} checked {% endif %}>
                     </div>
                   </div>
                 </td>
                 <td>
                   <select gfield="dietary_restrictions" gid="{{ item.id }}" class="selectpicker" data-width="120px">
                     <option value="none">None</option>
-                    <option value="kosher">Kosher</option>
-                    <option value="gluten_free">Gluten Free</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="nut-allergies">Nut-allergies</option>
+                    <option {% if item.dietary_restrictions is equalto "kosher" %} selected="selected" {% endif %} value="kosher">Kosher</option>
+                    <option {% if item.dietary_restrictions is equalto "gluten_free" %} selected="selected" {% endif %} value="gluten_free">Gluten Free</option>
+                    <option {% if item.dietary_restrictions is equalto "vegan" %} selected="selected" {% endif %} value="vegan">Vegan</option>
+                    <option {% if item.dietary_restrictions is equalto "nut-allergies" %} selected="selected" {% endif %} value="nut-allergies">Nut-allergies</option>
                   </select>
                 </td>
               </tr>
@@ -106,17 +108,17 @@
       <p class="title">Where will your party be staying?</p>
     </div>
     <div class="col-sm-12 btn-container">
-      <select pid="{{ q.id }}" class="selectpicker" title="Please select..." show-tick>
-        <option>Blue Sky Lodge</option>
-        <option>Los Laureles</option>
-        <option>Carmel Valley Lodge</option>
-        <option>Bernardus Lodge & Spa</option>
-        <option>Carmel Valley Ranch</option>
-        <option>Quail Lodge & Golf Club</option>
-        <option>Hyatt Regency Monterey</option>
-        <option>Hilton Garden Inn Monterey</option>
-        <option>Airbnb/Rental</option>
-        <option>Other</option>
+      <select pid="{{ q.id }}" pfield="accommodations" class="selectpicker" title="Please select..." show-tick>
+        <option {% if q.accommodations is equalto "blue_sky_lodge" %} selected="selected" {% endif %} value="blue_sky_lodge">Blue Sky Lodge</option>
+        <option {% if q.accommodations is equalto "los_laureles" %} selected="selected" {% endif %} value="los_laureles">Los Laureles</option>
+        <option {% if q.accommodations is equalto "carmel_valley_lodge" %} selected="selected" {% endif %} value="carmel_valley_lodge">Carmel Valley Lodge</option>
+        <option {% if q.accommodations is equalto "bernardus_lodge" %} selected="selected" {% endif %} value="bernardus_lodge">Bernardus Lodge & Spa</option>
+        <option {% if q.accommodations is equalto "carmel_valley_ranch" %} selected="selected" {% endif %} value="carmel_valley_ranch">Carmel Valley Ranch</option>
+        <option {% if q.accommodations is equalto "quail_lodge" %} selected="selected" {% endif %} value="quail_lodge">Quail Lodge & Golf Club</option>
+        <option {% if q.accommodations is equalto "hyatt_regency" %} selected="selected" {% endif %} value="hyatt_regency">Hyatt Regency Monterey</option>
+        <option {% if q.accommodations is equalto "hilton_garden_inn" %} selected="selected" {% endif %} value="hilton_garden_inn">Hilton Garden Inn Monterey</option>
+        <option {% if q.accommodations is equalto "airbnb_rental" %} selected="selected" {% endif %} value="airbnb_rental">Airbnb/Rental</option>
+        <option {% if q.accommodations is equalto "other" %} selected="selected" {% endif %} value="other">Other</option>
       </select>
     </div>
   </div>
@@ -133,5 +135,6 @@
   
 {% block scripts %} 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='rsvp.js') }}"></script>
 {% endblock scripts %}
