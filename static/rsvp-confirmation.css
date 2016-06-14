@@ -1,0 +1,37 @@
+.flex-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.check-circle {
+  font-size: 5em;
+  color: #43A047;
+}
+
+.mdl-card {
+  margin-top: 2em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rehersal-party-card-square.mdl-card {
+  width: 300px;
+  height: 320px;
+}
+.rehersal-party-card-square > .mdl-card__title {
+  color: #fff;
+  background: url('/static/rehersal-party.jpg') center / cover;
+}
+
+
+.day-after-party-card-square.mdl-card {
+  width: 300px;
+  height: 320px;
+}
+.day-after-party-card-square > .mdl-card__title {
+  color: #fff;
+  background: url('/static/turn-12.png') center / cover;
+}

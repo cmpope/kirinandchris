@@ -73,10 +73,8 @@ def rsvp(**kwargs):
     x = None
     # if addressForm.validate_on_submit():
     if request.method == "POST":
-        print 'in the if'
         # address = addressForm.address.data
         address = request.form['address']
-        print address
         x = process.extractOne(address, all_addresses)
         if x[1] == 100:
             q = models.Party.query.filter_by(address=address).first()
@@ -89,11 +87,14 @@ def rsvp(**kwargs):
     return render_template('rsvp.html', addressForm=addressForm, addres=address, postal=postal, full_name=full_name, g=g, q=q, x=x, check=check, error=error)
 
 
+@app.route('/rsvp/confirmation')
+def rsvp_confirmation():
+    return render_template('rsvp-confirmation.html')
+
 @app.route('/api/confirm-address', methods=['POST'])
 def confirm_address_api():
     if request.method == "POST":
         address = request.data
-        print address
         return rsvp(address)
 
 @app.route('/rsvp/update/guest', methods=['POST'])
@@ -102,6 +103,7 @@ def rsvp_update_guest():
         r = request.get_json()
         for x in r:
             g = models.Guests.query.filter_by(id=x['gid']).first()
+            g.email - x['email']
             g.attending = x['attending']
             g.dietary_restrictions = x['dietary_restrictions']
             db.session.merge(g)

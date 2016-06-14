@@ -3,13 +3,6 @@ $(document).ready(function() {
     var address = $(this).text();
     $('#address').val(address);
     $('#addressLookup').submit();
-    // $.ajax({
-    //   method: 'POST',
-    //   url: '/api/confirm-address',
-    //   data: address,
-    //   contentType : "text/plain"
-    // });
-    console.log('Clicked ' + $(this).text());
   });
 
   $('.mdl-switch').click(function(){
@@ -32,6 +25,9 @@ $(document).ready(function() {
       var guestData = {}
       var gid = this.getAttribute('gid');
       guestData['gid'] = gid;
+      var emailSelector = '[gid="' + gid + '\"] [gfield="email"]';
+      var emailUpdate = $(emailSelector).val();
+      guestData['email'] = emailUpdate;
       var attendingSelector = '[gid="' + gid + '\"] [gfield="attending"]';
       var attendingUpdate = $(attendingSelector).is(":checked"); 
       guestData['attending'] = attendingUpdate;
@@ -46,8 +42,6 @@ $(document).ready(function() {
       url : '/rsvp/update/guest',
       data : JSON.stringify(guestArray),
       contentType : "application/json"
-    }).done(function(){
-      console.log('done');
     });
   }
 
@@ -66,7 +60,7 @@ $(document).ready(function() {
       data : JSON.stringify(partyData),
       contentType : "application/json"
     }).done(function(){
-      console.log('done');
+      window.location = "/rsvp/confirmation";
     });
   }
 

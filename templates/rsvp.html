@@ -3,7 +3,7 @@
 {% block head %}
 <title>RSVP</title>
 <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-teal.min.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
@@ -25,10 +25,11 @@
     {% endfor %}
     <div class="address-form">
       <form id="addressLookup" role="form" method="POST" action="/rsvp">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="address" type="text" id="sample3">
-          <label class="mdl-textfield__label" for="sample3">Please Enter the Address on Your Invite...</label>
+        <div class="address-field mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" name="address" type="text" id="address">
+          <label class="mdl-textfield__label" for="address">Enter the Address on Your Invite...</label>
         </div>
+        <input type="submit" class="address-submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
       </form>
 
 {#       <form id="addressLookup" role="form" method="POST" action="/rsvp">
@@ -61,12 +62,13 @@
 
 {% if g %}
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-      <div class="table-container">
-        <table class="table responsive mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+      <div class="table-container table-responsive">
+        <table class="table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
           <thead>
             <tr>
               <th class="mdl-data-table__cell--non-numeric">Name</th>
+              <th>Email</th>
               <th>Attending?</th>
               <th>Dietary Restrictions</th>
             </tr>
@@ -74,12 +76,18 @@
           <tbody>
             {% for item in g %}
               <tr gid="{{ item.id }}">
-                <td gid="{{ item.id }}" class="mdl-data-table__cell--non-numeric">{{ item.first_name }} {{ item.last_name }}</td>
+                <td gid="{{ item.id }}" class="name mdl-data-table__cell--non-numeric">{{ item.first_name }} {{ item.last_name }}</td>
+                <td>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input gid="{{ item.id }}" gfield="email" class="mdl-textfield__input" type="email" id="{{ item.id }}" {% if item.email %} value="{{ item.email }}" {% endif %}>
+                    <label class="mdl-textfield__label" for="{{ item.id }}">Email...</label>
+                  </div>
+                </td>
                 <td class="toggle-ctn">
                   <div class="toggle-container">
                     <div class="toggle-center">
 {#                       <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect attending" for="{{ item.id }}">
-                        <input type="checkbox" gfield="attending" gid="{{ item.id }}" id="{{ item.id }}" class="mdl-switch__input">
+                        <input type="checkbox" gfield="attending" gid="{{ item.id }}" id="{{ item.id }}" class="mdl-switch__input" {% if item.attending %} checked {% endif %}>
                         <span class="mdl-switch__label"></span>
                       </label> #}
                       <input gid="{{ item.id }}" gfield="attending" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" {% if item.attending %} checked {% endif %}>
@@ -125,7 +133,7 @@
 
   <div class="row">
     <div class="submit table-container">
-      <input id="submitInfo" class="btn btn-primary" type="submit" value="Submit">
+      <input id="submitInfo" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit" value="Submit">
     </div>
   </div>
 

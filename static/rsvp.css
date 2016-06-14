@@ -35,3 +35,30 @@
 .submit {
   margin-bottom: 3em;
 }
+
+.mdl-textfield {
+  width: 200px;
+}
+
+.address-field {
+  display: block;
+  width: 300px;
+}
+
+.address-submit {
+  display: block;
+  margin: auto;
+}
+
+.name {
+  font-size: 16px;
+  font-family: "Helvetica","Arial",sans-serif;
+}
+
+.table>tbody>tr>td {
+  vertical-align: middle;
+}
+
+.table>thead>tr>th {
+  text-align: center;
+}
