@@ -66,10 +66,14 @@ def rsvp(**kwargs):
     if request.method == "POST":
         # address = addressForm.address.data
         address = request.form['address']
+        print address
         x = process.extractOne(address, all_addresses)
+        print x[1]
         if x[1] == 100:
             q = models.Party.query.filter_by(address=address).first()
+            print q
             g = models.Guests.query.filter_by(party_id=q.id).all()
+            print g
             addressForm.address.data = ''
         elif 85 < x[1] < 100:
             check = True
@@ -92,9 +96,11 @@ def confirm_address_api():
 def rsvp_update_guest():
     if request.method == "POST":
         r = request.get_json()
+        print r
         for x in r:
             g = models.Guests.query.filter_by(id=x['gid']).first()
-            g.email = x['email']
+            if g.email:
+                g.email= x['email']
             g.attending = x['attending']
             g.dietary_restrictions = x['dietary_restrictions']
             db.session.add(g)

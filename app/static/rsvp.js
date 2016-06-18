@@ -27,6 +27,7 @@ $(document).ready(function() {
       guestData['gid'] = gid;
       var emailSelector = '[gid="' + gid + '\"] [gfield="email"]';
       var emailUpdate = $(emailSelector).val();
+      console.log('emailUpdate :', emailUpdate);
       guestData['email'] = emailUpdate;
       var attendingSelector = '[gid="' + gid + '\"] [gfield="attending"]';
       var attendingUpdate = $(attendingSelector).is(":checked"); 
@@ -36,6 +37,7 @@ $(document).ready(function() {
       guestData['dietary_restrictions'] = dietaryUpdate;
       guestArray.push(guestData);
     });
+    console.log(guestArray);
     $.ajax({
       method : "POST",
       url : '/rsvp/update/guest',
