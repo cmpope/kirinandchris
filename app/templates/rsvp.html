@@ -7,13 +7,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-
+<link href='https://fonts.googleapis.com/css?family=Petit+Formal+Script|Didact+Gothic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='rsvp.css') }}">
 {% endblock head %}
 
 {% block page_content %}
 <div class="row title">
   <h1>RSVP</h1>
+  <h3 class="sub-title">We hope you can join us!</h3>
 </div>
 <div class="row">
   <div class="col-sm-12">
@@ -27,9 +28,10 @@
       <form id="addressLookup" role="form" method="POST" action="/rsvp">
         <div class="address-field mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" name="address" type="text" id="address">
-          <label class="mdl-textfield__label" for="address">Enter the Address on Your Invite...</label>
+          <label class="mdl-textfield__label" for="address">Enter the first line of your address...</label>
         </div>
-        <input type="submit" class="address-submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+        <p class="title example"><em>(ex. 16 Montana Dr. Apt. 49)</em></p>
+        <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect address-submit">
       </form>
 
 {#       <form id="addressLookup" role="form" method="POST" action="/rsvp">
@@ -47,8 +49,8 @@
         <h6>Did you mean this address?</h6>
         <a id="confirm-address"><h6>{{ x[0] }}</h6></a>
       {% elif g %}
-        <h6>Success!</h6>
-        <h6>Please RSVP for the members in your Party at this Addresss:</h6>
+        <h6 class="petit-formal">Success!</h6>
+        <h6>Please RSVP for guests at the addresss below:</h6>
         <h6><em>{{ q.address }}</em></h6>
       {% else %}
       {% if error %} 
@@ -67,8 +69,8 @@
         <table class="table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
           <thead>
             <tr>
-              <th class="mdl-data-table__cell--non-numeric">Name</th>
-              <th>Email</th>
+              <th>Name</th>
+              <th>Email <em>(optional)</em></th>
               <th>Attending?</th>
               <th>Dietary Restrictions</th>
             </tr>
@@ -76,7 +78,7 @@
           <tbody>
             {% for item in g %}
               <tr gid="{{ item.id }}">
-                <td gid="{{ item.id }}" class="name mdl-data-table__cell--non-numeric">{{ item.first_name }} {{ item.last_name }}</td>
+                <td gid="{{ item.id }}" class="name">{{ item.first_name }} {{ item.last_name }}</td>
                 <td>
                   <div class="mdl-textfield mdl-js-textfield">
                     <input gid="{{ item.id }}" gfield="email" class="mdl-textfield__input" type="email" id="{{ item.id }}" {% if item.email %} value="{{ item.email }}" {% endif %}>
@@ -113,7 +115,7 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <p class="title">Where will your party be staying?</p>
+      <p class="title">Where will your party be staying? <em>(optional)</em></p>
     </div>
     <div class="col-sm-12 btn-container">
       <select pid="{{ q.id }}" pfield="accommodations" class="selectpicker" title="Please select..." show-tick>
@@ -133,7 +135,7 @@
 
   <div class="row">
     <div class="submit table-container">
-      <input id="submitInfo" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit" value="Submit">
+      <input id="submitInfo" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect save-submit" type="submit" value="Submit">
     </div>
   </div>
 

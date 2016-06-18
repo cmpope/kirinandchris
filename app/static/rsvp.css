@@ -1,5 +1,33 @@
+.nav-margin-top {
+  margin-top: 5em;
+}
+
 .title {
   text-align: center;
+}
+
+a {
+  color: #68c3a3;
+}
+
+.btn-primary, .mdl-button {
+  background-color: #68c3a3;
+  border-color: #68c3a3;
+  background: #68c3a3;
+}
+
+.sub-title {
+  font-family: 'Petit Formal Script', cursive;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.petit-formal {
+  font-family: 'Petit Formal Script', cursive;
 }
 
 .address-form {
@@ -40,6 +68,10 @@
   width: 200px;
 }
 
+p, h6, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-menu, .address-submit, .mdl-textfield__input, .mdl-textfield__label {
+  font-family: 'Didact Gothic', sans-serif;
+}
+
 .address-field {
   display: block;
   width: 300px;
@@ -48,11 +80,23 @@
 .address-submit {
   display: block;
   margin: auto;
+  background: #68c3a3;
+  color: #fff;
+}
+
+.save-submit {
+  background: #68c3a3;
+  color: #fff;
+}
+
+.example {
+  opacity: 0.4;
 }
 
 .name {
   font-size: 16px;
-  font-family: "Helvetica","Arial",sans-serif;
+  /*font-family: "Helvetica","Arial",sans-serif;*/
+  text-align: center;
 }
 
 .table>tbody>tr>td {
@@ -61,4 +105,16 @@
 
 .table>thead>tr>th {
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nav-margin-top {
+    margin-top: 8em;
+  }
+}
+
+@media (min-width: 991px) {
+  .nav-margin-top {
+    margin-top: 5em;
+  }
 }
