@@ -1,22 +1,13 @@
-from flask import Flask, render_template, request, session, flash, redirect, url_for
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask import render_template, request, session, flash, redirect, url_for
+from app import app, models, db
 from forms import AddressForm
 import os
-import requests
 from fuzzywuzzy import process
 
-
-app = Flask(__name__)
-app.config.from_object(os.environ['APP_SETTINGS'])
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
-
-import models
 
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
 
 @app.errorhandler(500)
 def internal_server_error(e):
@@ -125,8 +116,3 @@ def rsvp_admin():
     party = models.Party.query.all()
     guests = models.Guests.query.all()
     return render_template('rsvp-admin.html', party=party, guests=guests)
-
-
-
-if __name__ == '__main__':
-    app.run()
