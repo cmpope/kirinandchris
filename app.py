@@ -103,10 +103,10 @@ def rsvp_update_guest():
         r = request.get_json()
         for x in r:
             g = models.Guests.query.filter_by(id=x['gid']).first()
-            g.email - x['email']
+            g.email = x['email']
             g.attending = x['attending']
             g.dietary_restrictions = x['dietary_restrictions']
-            db.session.merge(g)
+            db.session.add(g)
             db.session.commit()
     return redirect('/rsvp')
 
@@ -116,7 +116,7 @@ def rsvp_update_party():
         r = request.get_json()
         p = models.Party.query.filter_by(id=r['pid']).first()
         p.accommodations = r['accommodations']
-        db.session.merge(p)
+        db.session.add(p)
         db.session.commit()
     return redirect('/rsvp')
 

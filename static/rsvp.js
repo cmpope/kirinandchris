@@ -36,7 +36,6 @@ $(document).ready(function() {
       guestData['dietary_restrictions'] = dietaryUpdate;
       guestArray.push(guestData);
     });
-    console.log(guestArray);
     $.ajax({
       method : "POST",
       url : '/rsvp/update/guest',
@@ -49,8 +48,6 @@ $(document).ready(function() {
     var partyData = {}
     var p = $('[pfield="accommodations"]');
     pid = p.attr('pid');
-    // console.log('pid :', pid);
-    // var accommodationsSelector = '[pid="' + gid + '\"] [pfield="dietary_restrictions"]';
     var accommodationsUpdate = p.val();
     partyData['pid'] = pid;
     partyData['accommodations'] = accommodationsUpdate;
