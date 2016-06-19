@@ -2,3 +2,41 @@
   display: flex;
   justify-content: center;
 }
+
+.nav-margin-top {
+  margin-top: 5em;
+}
+
+.demo-card-square.mdl-card {
+  width: 10em;
+  height: 10em;
+  text-align: center;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background: #46B6AC;
+}
+
+.search-spacing {
+  margin-top: 3em;
+}
+
+.export {
+  color: black;
+}
+
+#export-container {
+  width: 10px;
+}
+
+@media (min-width: 768px) {
+  .nav-margin-top {
+    margin-top: 8em;
+  }
+}
+
+@media (min-width: 991px) {
+  .nav-margin-top {
+    margin-top: 5em;
+  }
+}

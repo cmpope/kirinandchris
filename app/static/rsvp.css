@@ -10,6 +10,12 @@ a {
   color: #68c3a3;
 }
 
+.naive {
+  line-height: 1;
+  font-size: 7em;
+  font-family: 'NaiveInlineSansMedium';
+}
+
 .btn-primary, .mdl-button {
   background-color: #68c3a3;
   border-color: #68c3a3;

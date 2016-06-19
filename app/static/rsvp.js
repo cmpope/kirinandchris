@@ -41,8 +41,7 @@ $(document).ready(function() {
       method : "POST",
       url : '/rsvp/update/guest',
       data : JSON.stringify(guestArray),
-      contentType : "application/json",
-      crossDomain : true
+      contentType : "application/json"
     });
   }
 
@@ -57,8 +56,7 @@ $(document).ready(function() {
       method : "POST",
       url : '/rsvp/update/party',
       data : JSON.stringify(partyData),
-      contentType : "application/json",
-      crossDomain : true
+      contentType : "application/json"
     }).done(function(){
       window.location = "/rsvp/confirmation";
     });

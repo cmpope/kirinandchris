@@ -35,3 +35,19 @@
   color: #fff;
   background: url('/static/turn-12.png') center / cover;
 }
+
+.nav-margin-top {
+  margin-top: 5em;
+}
+
+@media (min-width: 768px) {
+  .nav-margin-top {
+    margin-top: 8em;
+  }
+}
+
+@media (min-width: 991px) {
+  .nav-margin-top {
+    margin-top: 5em;
+  }
+}

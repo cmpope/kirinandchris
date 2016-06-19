@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'NaiveInlineSansMedium';
+  src: url('naive-inline-sans-medium.eot');
+  src: url('naive-inline-sans-medium.eot?#iefix') format('embedded-opentype'),
+             url('naive-inline-sans-medium.woff2') format('woff2'),
+       url('naive-inline-sans-medium.woff') format('woff'),
+       url('naive-inline-sans-medium.ttf') format('truetype'),
+       url('naive-inline-sans-medium.svg#youworkforthem') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,4 +1,4 @@
-from flask import render_template, request, session, flash, redirect, url_for
+from flask import render_template, request, session, flash, redirect, url_for, Response
 from app import app, models, db
 from forms import AddressForm
 import os
@@ -116,4 +116,7 @@ def rsvp_update_party():
 def rsvp_admin():
     party = models.Party.query.all()
     guests = models.Guests.query.all()
-    return render_template('rsvp-admin.html', party=party, guests=guests)
+    total_attending = models.Guests.query.filter_by(attending=True).all()
+    total_attending = len(total_attending)
+    return render_template('rsvp-admin.html', party=party, guests=guests, total_attending=total_attending)
+
