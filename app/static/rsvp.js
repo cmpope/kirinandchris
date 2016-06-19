@@ -37,12 +37,12 @@ $(document).ready(function() {
       guestData['dietary_restrictions'] = dietaryUpdate;
       guestArray.push(guestData);
     });
-    console.log(guestArray);
     $.ajax({
       method : "POST",
       url : '/rsvp/update/guest',
       data : JSON.stringify(guestArray),
-      contentType : "application/json"
+      contentType : "application/json",
+      crossDomain : true
     });
   }
 
@@ -57,7 +57,8 @@ $(document).ready(function() {
       method : "POST",
       url : '/rsvp/update/party',
       data : JSON.stringify(partyData),
-      contentType : "application/json"
+      contentType : "application/json",
+      crossDomain : true
     }).done(function(){
       window.location = "/rsvp/confirmation";
     });
