@@ -1,5 +1,5 @@
 .nav-margin-top {
-  margin-top: 5em;
+  margin-top: 6em;
 }
 
 .title {
@@ -74,7 +74,7 @@ h1 {
   width: 200px;
 }
 
-p, h6, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-menu, .address-submit, .mdl-textfield__input, .mdl-textfield__label {
+p, h6, h5, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-menu, .address-submit, .mdl-textfield__input, .mdl-textfield__label {
   font-family: 'Didact Gothic', sans-serif;
 }
 
@@ -107,6 +107,7 @@ p, h6, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-menu, .
 
 .table>tbody>tr>td {
   vertical-align: middle;
+  text-align: center;
 }
 
 .table>thead>tr>th {
@@ -119,6 +120,7 @@ p, h6, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-menu, .
 }
 
 .bottom {
+  margin-top: 7em;
   margin-bottom: 4em;
 }
 
@@ -130,6 +132,6 @@ p, h6, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-menu, .
 
 @media (min-width: 991px) {
   .nav-margin-top {
-    margin-top: 5em;
+    margin-top: 6em;
   }
 }

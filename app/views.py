@@ -1,6 +1,7 @@
 from flask import render_template, request, session, flash, redirect, url_for, Response
 from app import app, models, db
 from forms import AddressForm
+from datetime import date
 import os
 from fuzzywuzzy import process
 
@@ -116,9 +117,13 @@ def rsvp_update_party():
 
 @app.route('/rsvp/admin')
 def rsvp_admin():
+    d0 = date.today()
+    d1 = date(2016, 7, 31)
+    days_until_rsvp = d1 - d0
+    days_until_rsvp = days_until_rsvp.days
     party = models.Party.query.all()
     guests = models.Guests.query.all()
     total_attending = models.Guests.query.filter_by(attending=True).all()
     total_attending = len(total_attending)
-    return render_template('rsvp-admin.html', party=party, guests=guests, total_attending=total_attending)
+    return render_template('rsvp-admin.html', party=party, guests=guests, total_attending=total_attending, days_until_rsvp=days_until_rsvp)
 

@@ -11,14 +11,26 @@
   width: 10em;
   height: 10em;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;
   background: #46B6AC;
 }
 
+.demo-card-square > .blue {
+  color: #fff;
+  background: blue;
+}
+
 .search-spacing {
   margin-top: 3em;
+}
+
+.table>tbody>tr>td, .table>thead:first-child>tr:first-child>th {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .export {

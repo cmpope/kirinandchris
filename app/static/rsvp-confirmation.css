@@ -1,7 +1,15 @@
+a {
+  color: #68c3a3;
+}
+
 .flex-center {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.extra-margin {
+  margin-top: 2em;
 }
 
 .check-circle {
@@ -17,11 +25,16 @@
   text-align: center;
 }
 
+.mdl-card__title-text {
+  font-family: 'Didact Gothic', sans-serif;
+}
+
 .mdl-card {
   width: 15em;
   height: 24em;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Didact Gothic', sans-serif;
 }
 .the-wedding-card-square > .mdl-card__title {
   color: #fff;
@@ -46,6 +59,8 @@
 .bottom {
   margin-bottom: 4em;
 }
+
+
 
 .nav-margin-top {
   margin-top: 5em;
