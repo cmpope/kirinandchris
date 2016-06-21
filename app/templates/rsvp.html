@@ -33,12 +33,6 @@
         <p class="title example"><em>(ex. 16 Montana Dr. Apt. 49)</em></p>
         <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect address-submit">
       </form>
-
-{#       <form id="addressLookup" role="form" method="POST" action="/rsvp">
-        {{ addressForm.csrf_token }}
-        {{ addressForm.address.label }} {{ addressForm.address() }}
-        {{ addressForm.submit() }}
-      </form> #}
     </div>
   </div>
 </div>
@@ -65,7 +59,7 @@
 {% if g %}
   <div class="row">
     <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-      <div class="table-container table-responsive">
+      <div class="table-container table-responsive guests">
         <table class="table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
           <thead>
             <tr>
@@ -88,10 +82,6 @@
                 <td class="toggle-ctn">
                   <div class="toggle-container">
                     <div class="toggle-center">
-{#                       <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect attending" for="{{ item.id }}">
-                        <input type="checkbox" gfield="attending" gid="{{ item.id }}" id="{{ item.id }}" class="mdl-switch__input" {% if item.attending %} checked {% endif %}>
-                        <span class="mdl-switch__label"></span>
-                      </label> #}
                       <input gid="{{ item.id }}" gfield="attending" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" {% if item.attending %} checked {% endif %}>
                     </div>
                   </div>
@@ -133,7 +123,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row bottom">
     <div class="submit table-container">
       <input id="submitInfo" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect save-submit" type="submit" value="Submit">
     </div>

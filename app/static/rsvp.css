@@ -113,6 +113,15 @@ p, h6, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-menu, .
   text-align: center;
 }
 
+.table-responsive.guests {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+
+.bottom {
+  margin-bottom: 4em;
+}
+
 @media (min-width: 768px) {
   .nav-margin-top {
     margin-top: 8em;

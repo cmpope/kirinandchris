@@ -6,7 +6,7 @@
 
 .check-circle {
   font-size: 5em;
-  color: #43A047;
+  color: #68c3a3;
 }
 
 .mdl-card {
@@ -17,23 +17,34 @@
   text-align: center;
 }
 
-.rehersal-party-card-square.mdl-card {
-  width: 300px;
-  height: 320px;
+.mdl-card {
+  width: 15em;
+  height: 24em;
+  margin-left: auto;
+  margin-right: auto;
 }
-.rehersal-party-card-square > .mdl-card__title {
+.the-wedding-card-square > .mdl-card__title {
   color: #fff;
-  background: url('/static/rehersal-party.jpg') center / cover;
+  background: url('/static/the-wedding-card.jpg') center / cover;
 }
 
 
-.day-after-party-card-square.mdl-card {
-  width: 300px;
-  height: 320px;
+.after-party-card-square > .mdl-card__title {
+  color: #fff;
+  background: url('/static/after-party.png') center / cover;
 }
+
 .day-after-party-card-square > .mdl-card__title {
   color: #fff;
-  background: url('/static/turn-12.png') center / cover;
+  background: url('/static/day-after-party.jpg') center / cover;
+}
+
+.naive {
+  font-family: 'Petit Formal Script', cursive;
+}
+
+.bottom {
+  margin-bottom: 4em;
 }
 
 .nav-margin-top {

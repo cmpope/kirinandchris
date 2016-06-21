@@ -5,34 +5,29 @@
 <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-teal.min.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href='https://fonts.googleapis.com/css?family=Petit+Formal+Script|Didact+Gothic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='rsvp-confirmation.css') }}">
 {% endblock head %}
 
 
 {% block page_content %}
   <div class="row flex-center">
-    <h1>Success</h1>
+    <h1 class="naive">Success</h1>
   </div>
 
   <div class="row flex-center">
     <i class="material-icons check-circle">check_circle</i>
   </div>
 
-  <div class="row flex-center">
-    <div class="col-sm-10 text-center">
-      <h3>Please come join us at any of the following events</h3>
-    </div>
-  </div>
-
   <div class="row">
-    <div class="col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-2">
-      <div class="rehersal-party-card-square mdl-card mdl-shadow--2dp">
+    <div class="col-sm-4 col-md-4 col-lg-3 col-lg-offset-2">
+      <div class="the-wedding-card-square mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text">Rehersal Party</h2>
+          <h2 class="mdl-card__title-text">Ceremony & Reception</h2>
         </div>
         <div class="mdl-card__supporting-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aenan convallis.
+          <!-- <strong>(3:30 – 10 PM, 60 Holman Road, Carmel Valley)</strong></br> -->
+          Please arrive at Holman Ranch at 3:30pm to allow ample time for transportation to the ceremony site. Further details can be found <a href="/the-big-day">here</a>
         </div>
         <div class="mdl-card__actions mdl-card--border">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
@@ -41,14 +36,30 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-5 col-md-4">
-      <div class="day-after-party-card-square mdl-card mdl-shadow--2dp">
+    <div class="col-sm-4 col-md-4 col-lg-3">
+      <div class="after-party-card-square mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text">Day-after Party</h2>
+          <h2 class="mdl-card__title-text">After Party</h2>
         </div>
         <div class="mdl-card__supporting-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aenan convallis.
+          <!-- <strong>(10 PM – 12 PM, 16 W Carmel Valley R, Carmel Valley)</strong></br> -->
+          Keep the celebration going after the reception with dancing, drinks, and late-night bites at Will’s Fargo Steakhouse.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Add to Calendar
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-3 bottom">
+      <div class="day-after-party-card-square mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title mdl-card--expand">
+          <h2 class="mdl-card__title-text">First Day as Mr. & Mrs.</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <!-- <strong>(11 AM – 3 PM), TBD</strong> </br> -->
+          Joins us for drinks, snacks and Sunday football on our first full day as a married couple! Further details will be provided via email.
         </div>
         <div class="mdl-card__actions mdl-card--border">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">

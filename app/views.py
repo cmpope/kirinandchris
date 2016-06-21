@@ -93,8 +93,10 @@ def rsvp_update_guest():
     if request.method == "POST":
         r = request.get_json()
         for x in r:
+            print x
             g = models.Guests.query.filter_by(id=x['gid']).first()
-            if g.email:
+            if x['email']:
+                print g.email
                 g.email= x['email']
             g.attending = x['attending']
             g.dietary_restrictions = x['dietary_restrictions']
