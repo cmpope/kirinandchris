@@ -69,7 +69,7 @@ def rsvp(**kwargs):
         address = request.form['address']
         x = process.extractOne(address, all_addresses)
         if x[1] == 100:
-            q = models.Party.query.filter_by(address=address).first()
+            q = models.Party.query.filter_by(address=x[0]).first()
             g = models.Guests.query.filter_by(party_id=q.id).all()
             addressForm.address.data = ''
         elif 85 < x[1] < 100:
