@@ -45,6 +45,10 @@
   width: 10px;
 }
 
+#accommodationChart {
+  height: 20em;
+}
+
 @media (min-width: 768px) {
   .nav-margin-top {
     margin-top: 8em;
