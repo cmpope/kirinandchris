@@ -1,16 +1,9 @@
 body {
-  margin-top: 100px;
+  padding-top: 70px;
 }
 
 img {
   margin: 10px;
-}
-
-img:hover {
-  -webkit-filter: drop-shadow(1px 1px 0 black)
-                  drop-shadow(-1px -1px 0 black);
-  filter: drop-shadow(1px 1px 0 black) 
-          drop-shadow(-1px -1px 0 black);
 }
 
 .row {
@@ -21,4 +14,19 @@ img:hover {
   margin-left: auto;
   margin-right: auto;
   width: 65%;
+}
+
+.portfolio-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 60ms ease;
+  transition: all 60ms ease;
+}
+
+.portfolio-item:active {
+  opacity: .75;
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: all 60ms ease;
+  transition: all 60ms ease;
 }

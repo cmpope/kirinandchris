@@ -24,6 +24,7 @@ body {
 .tagline {
     text-shadow: 0 0 10px #000;
     color: #fff;
+    font-family: 'Petit Formal Script', cursive;
 }
 
 .img-center {
@@ -49,6 +50,7 @@ footer {
 
 .map-wrapper {
     margin-top: 20px;
+    margin-bottom: 6em;
 }
 
 a {
@@ -72,7 +74,7 @@ a:hover {
 
 .progress-bar {
     border-radius: 25px;
-    background-color: #74a4bc;
+    background-color: #68c3a3;
 }
 
 .air-travel-text {

@@ -12,6 +12,14 @@ body {
     margin-bottom: 25px;
 }
 
+.page-header {
+  font-family: 'Petit Formal Script', cursive;
+}
+
+.page-sub {
+  font-family: 'Didact Gothic', sans-serif;
+}
+
 footer {
     margin: 50px 0;
 }
