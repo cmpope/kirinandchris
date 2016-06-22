@@ -45,8 +45,14 @@
   width: 10px;
 }
 
+.chart-container {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
 #accommodationChart {
-  height: 20em;
+  height: 24em;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
