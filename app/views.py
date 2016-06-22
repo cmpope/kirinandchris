@@ -123,7 +123,102 @@ def rsvp_admin():
     days_until_rsvp = days_until_rsvp.days
     party = models.Party.query.all()
     guests = models.Guests.query.all()
+
+    bernardus = models.Party.query.filter_by(accommodations="bernardus_lodge").all()
+    bernardus_guests = []
+    for x in bernardus:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            bernardus_guests.append(y)
+    bernardus_guests = len(bernardus_guests)
+
+    blue_sky_lodge = models.Party.query.filter_by(accommodations="blue_sky_lodge").all()
+    blue_sky_guests = []
+    for x in blue_sky_lodge:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            blue_sky_guests.append(y)
+    blue_sky_guests = len(blue_sky_guests)
+
+    los_laureles = models.Party.query.filter_by(accommodations="los_laureles").all()
+    los_laureles_guests = []
+    for x in los_laureles:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            los_laureles_guests.append(y)
+    los_laureles_guests = len(los_laureles_guests)
+
+    carmel_valley_lodge = models.Party.query.filter_by(accommodations="carmel_valley_lodge").all()
+    carmel_valley_lodge_guests = []
+    for x in carmel_valley_lodge:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            carmel_valley_lodge_guests.append(y)
+    carmel_valley_lodge_guests = len(carmel_valley_lodge_guests)
+
+    carmel_valley_ranch = models.Party.query.filter_by(accommodations="carmel_valley_ranch").all()
+    carmel_valley_ranch_guests = []
+    for x in carmel_valley_ranch:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            carmel_valley_ranch_guests.append(y)
+    carmel_valley_ranch_guests = len(carmel_valley_ranch_guests)
+
+    quail_lodge = models.Party.query.filter_by(accommodations="quail_lodge").all()
+    quail_lodge_guests = []
+    for x in quail_lodge:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            quail_lodge_guests.append(y)
+    quail_lodge_guests = len(quail_lodge_guests)
+
+    hyatt_regency = models.Party.query.filter_by(accommodations="hyatt_regency").all()
+    hyatt_regency_guests = []
+    for x in hyatt_regency:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            hyatt_regency_guests.append(y)
+    hyatt_regency_guests = len(hyatt_regency_guests)
+
+    hilton_garden_inn = models.Party.query.filter_by(accommodations="hilton_garden_inn").all()
+    hilton_garden_inn_guests = []
+    for x in hilton_garden_inn:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            hilton_garden_inn_guests.append(y)
+    hilton_garden_inn_guests = len(hilton_garden_inn_guests)
+
+    airbnb_rental = models.Party.query.filter_by(accommodations="airbnb_rental").all()
+    airbnb_rental_guests = []
+    for x in airbnb_rental:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            airbnb_rental_guests.append(y)
+    airbnb_rental_guests = len(airbnb_rental_guests)
+
+    other = models.Party.query.filter_by(accommodations="other").all()
+    other_guests = []
+    for x in other:
+        p_g = models.Guests.query.filter_by(party_id=x.id).all()
+        for y in p_g:
+            other_guests.append(y)
+    other_guests = len(other_guests)
+
     total_attending = models.Guests.query.filter_by(attending=True).all()
     total_attending = len(total_attending)
-    return render_template('rsvp-admin.html', party=party, guests=guests, total_attending=total_attending, days_until_rsvp=days_until_rsvp)
+    return render_template('rsvp-admin.html', 
+                           party=party, 
+                           guests=guests, 
+                           total_attending=total_attending, 
+                           days_until_rsvp=days_until_rsvp, 
+                           bernardus=bernardus_guests, 
+                           blue_sky_lodge=blue_sky_guests, 
+                           los_laureles=los_laureles_guests, 
+                           carmel_valley_lodge=carmel_valley_lodge_guests, 
+                           carmel_valley_ranch=carmel_valley_ranch_guests, 
+                           quail_lodge=quail_lodge_guests, 
+                           hyatt_regency=hyatt_regency_guests, 
+                           hilton_garden_inn=hilton_garden_inn_guests, 
+                           airbnb_rental=airbnb_rental_guests, 
+                           other=other_guests)
 

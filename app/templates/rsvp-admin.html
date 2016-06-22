@@ -3,9 +3,12 @@
 {% block head %}
   <title>RSVP ADMIN</title>
   <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-teal.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='rsvp-admin.css') }}">
+  <meta id="bernardus-guests" bernardus-guests="{{ bernardus_guests }}">
+  <meta id="hyatt-guests" hyatt-guests="{{ hyatt_guests }}">
 {% endblock head%}
 
 {% block page_content %}
@@ -31,6 +34,11 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="myPieChart"></div>
+    </div>
+  </div>
   <div class="row search-spacing center-flex">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input id="search" class="mdl-textfield__input" name="search" type="text" data-list=".list">
@@ -46,7 +54,7 @@
   <div class="row">
     <div class="col-sm-10 col-sm-offset-1">
       <div id="guest-table" class="table-container table-responsive">
-        <table class="table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <table id="the-table" class="table mdl-data-table mdl-js-data-table mdl-shadow--2dp">
           <thead>
             <tr>
               <th>Name</th>
@@ -82,5 +90,33 @@
 
 {% block scripts %}
   <script type="text/javascript" src="{{ url_for('static', filename='jquery.hideseek.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery.tablesorter.min.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='rsvp-admin.js') }}"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      // Define the chart to be drawn.
+      var data = new google.visualization.DataTable()
+      data.addColumn('string', 'Accommodation');
+      data.addColumn('number', 'Guests');
+      data.addRows([
+        ['Blue Sky Lodge', {{ blue_sky_lodge }}],
+        ['Los Laureles', {{ los_laureles }}],
+        ['Carmel Valley Lodge', {{ carmel_valley_lodge }}],
+        ['Bernardus Lodge & Spa', {{  bernardus }}],
+        ['Carmel Valley Ranch', {{ carmel_valley_ranch }}],
+        ['Quail Lodge & Golf Club', {{ quail_lodge }}],
+        ['Hyatt Regency', {{ hyatt_regency }}],
+        ['Hilton Garden Inn', {{ hilton_garden_inn }}],
+        ['Airbnb/Rental', {{ airbnb_rental }}],
+        ['Other', {{ other }}]
+      ]);
+
+      // Instantiate and draw the chart.
+      var chart = new google.visualization.BarChart(document.getElementById('myPieChart'));
+      chart.draw(data, null);
+    }
+  </script>
 {% endblock %}

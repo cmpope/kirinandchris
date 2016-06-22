@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $('#search').hideseek();
 
+  $('#the-table').tablesorter();
+
     function exportTableToCSV($table, filename) {
 
         var $rows = $table.find('tr:has(td)'),

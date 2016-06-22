@@ -109,15 +109,15 @@
     </div>
     <div class="col-sm-12 btn-container">
       <select pid="{{ q.id }}" pfield="accommodations" class="selectpicker" title="Please select..." show-tick>
-        <option {% if q.accommodations is equalto "blue_sky_lodge" %} selected="selected" {% endif %} value="blue_sky_lodge">Blue Sky Lodge</option>
-        <option {% if q.accommodations is equalto "los_laureles" %} selected="selected" {% endif %} value="los_laureles">Los Laureles</option>
-        <option {% if q.accommodations is equalto "carmel_valley_lodge" %} selected="selected" {% endif %} value="carmel_valley_lodge">Carmel Valley Lodge</option>
+        <option {% if q.accommodations is equalto "airbnb_rental" %} selected="selected" {% endif %} value="airbnb_rental">Airbnb/Rental</option>
         <option {% if q.accommodations is equalto "bernardus_lodge" %} selected="selected" {% endif %} value="bernardus_lodge">Bernardus Lodge & Spa</option>
+        <option {% if q.accommodations is equalto "blue_sky_lodge" %} selected="selected" {% endif %} value="blue_sky_lodge">Blue Sky Lodge</option>
+        <option {% if q.accommodations is equalto "carmel_valley_lodge" %} selected="selected" {% endif %} value="carmel_valley_lodge">Carmel Valley Lodge</option>
         <option {% if q.accommodations is equalto "carmel_valley_ranch" %} selected="selected" {% endif %} value="carmel_valley_ranch">Carmel Valley Ranch</option>
-        <option {% if q.accommodations is equalto "quail_lodge" %} selected="selected" {% endif %} value="quail_lodge">Quail Lodge & Golf Club</option>
         <option {% if q.accommodations is equalto "hyatt_regency" %} selected="selected" {% endif %} value="hyatt_regency">Hyatt Regency Monterey</option>
         <option {% if q.accommodations is equalto "hilton_garden_inn" %} selected="selected" {% endif %} value="hilton_garden_inn">Hilton Garden Inn Monterey</option>
-        <option {% if q.accommodations is equalto "airbnb_rental" %} selected="selected" {% endif %} value="airbnb_rental">Airbnb/Rental</option>
+        <option {% if q.accommodations is equalto "los_laureles" %} selected="selected" {% endif %} value="los_laureles">Los Laureles</option>
+        <option {% if q.accommodations is equalto "quail_lodge" %} selected="selected" {% endif %} value="quail_lodge">Quail Lodge & Golf Club</option>
         <option {% if q.accommodations is equalto "other" %} selected="selected" {% endif %} value="other">Other</option>
       </select>
     </div>

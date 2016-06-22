@@ -33,6 +33,10 @@
   vertical-align: middle;
 }
 
+.table>thead>tr>th {
+  cursor: pointer;
+}
+
 .export {
   color: black;
 }

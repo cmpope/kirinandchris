@@ -101,7 +101,6 @@ p, h6, h5, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-men
 
 .name {
   font-size: 16px;
-  /*font-family: "Helvetica","Arial",sans-serif;*/
   text-align: center;
 }
 
@@ -115,7 +114,7 @@ p, h6, h5, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-men
 }
 
 .table-responsive.guests {
-  overflow-x: visible !important;
+  /*overflow-x: visible !important;*/
   overflow-y: visible !important;
 }
 
