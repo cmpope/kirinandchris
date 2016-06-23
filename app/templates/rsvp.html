@@ -33,16 +33,16 @@
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row extra-margin">
   <div class="col-sm-12">
     <div class="address-lookup-response">
       {% if check %}
-        <h6>Did you mean this address?</h6>
-        <a id="confirm-address"><h6>{{ x[0] }}</h6></a>
+        <h4>Did you mean this address?</h4>
+        <a id="confirm-address"><h3>{{ x[0] }}</h3></a>
       {% elif g %}
-        <h6 class="petit-formal">Success!</h6>
-        <h6>Please RSVP for guests at the address below:</h6>
-        <h6><em>{{ q.address }}</em></h6>
+        <h4 class="petit-formal">Success!</h4>
+        <h4>Please RSVP for guests at the address below:</h4>
+        <h4><em>{{ q.address }}</em></h4>
       {% else %}
       {% if error %} 
           <h6>Sorry, we don't recognize that address.</h6> 

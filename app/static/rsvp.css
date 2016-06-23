@@ -123,6 +123,10 @@ p, h6, h5, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-men
   margin-bottom: 4em;
 }
 
+.extra-margin {
+  margin-top: 2em;
+}
+
 @media (min-width: 768px) {
   .nav-margin-top {
     margin-top: 8em;
