@@ -103,7 +103,7 @@ def rsvp_update_guest():
                 from_email = Email("info@kirinandchris.com")
                 subject = "%s - We Successfully Received Your RSVP!" % g.first_name
                 to_email = Email(g.email)
-                content = Content("text/html", """%s, </br><br> Thank you for your response. For further details on our wedding day, please visit <a href="http://www.kirinandchris.com">kirinandchris.com.</a> <br><br> Please reach out to us at <a href="mailto:info@kirinandchris.com">info@kirinandchris.com</a> if you have any questions. <br><br><br> Love, <br><br> Kirin and Chris """ % g.first_name)
+                content = Content("text/html", """%s, <br><br> Thank you for your response. For further details on our wedding day, please visit <a href="http://www.kirinandchris.com">kirinandchris.com.</a> <br><br> Please reach out to us at <a href="mailto:info@kirinandchris.com">info@kirinandchris.com</a> if you have any questions. <br><br><br> Love, <br><br> Kirin and Chris """ % g.first_name)
                 mail = Mail(from_email, subject, to_email, content)
                 response = sg.client.mail.send.post(request_body=mail.get())
                 print(response.status_code)
