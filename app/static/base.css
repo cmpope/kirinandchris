@@ -15,6 +15,10 @@ body {
  font-family: 'Didact Gothic', sans-serif;
 }
 
+p {
+  font-size: 18px;
+}
+
 .page-header {
   font-family: 'Petit Formal Script', cursive;
 }

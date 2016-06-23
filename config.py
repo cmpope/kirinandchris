@@ -8,6 +8,7 @@ class Config(object):
     CSRF_ENABLED = True
     SECRET_KEY = 'this-really-needs-to-be-changed'
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    SENDGRID_API_KEY = os.environ['SENDGRID_API_KEY']
 
 
 class ProductionConfig(Config):
@@ -22,7 +23,8 @@ class StagingConfig(Config):
 class DevelopmentConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
-
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    SENDGRID_API_KEY = os.environ['SENDGRID_API_KEY']
 
 class TestingConfig(Config):
     TESTING = True

@@ -2,7 +2,9 @@ from flask import render_template, request, session, flash, redirect, url_for, R
 from app import app, models, db
 from forms import AddressForm
 from datetime import date
+import sendgrid
 import os
+from sendgrid.helpers.mail import *
 from fuzzywuzzy import process
 
 
@@ -94,11 +96,19 @@ def rsvp_update_guest():
     if request.method == "POST":
         r = request.get_json()
         for x in r:
-            print x
             g = models.Guests.query.filter_by(id=x['gid']).first()
             if x['email']:
-                print g.email
                 g.email= x['email']
+                sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+                from_email = Email("info@kirinandchris.com")
+                subject = "%s %s - We Successfully Received Your RSVP" % (g.first_name, g.last_name)
+                to_email = Email(g.email)
+                content = Content("text/plain", "some text here")
+                mail = Mail(from_email, subject, to_email, content)
+                response = sg.client.mail.send.post(request_body=mail.get())
+                print(response.status_code)
+                print(response.body)
+                print(response.headers)
             g.attending = x['attending']
             g.dietary_restrictions = x['dietary_restrictions']
             db.session.add(g)
