@@ -24,17 +24,8 @@ img {
   text-align: center;
 }
 
-.portfolio-item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all 60ms ease;
-  transition: all 60ms ease;
-}
-
-.portfolio-item:active {
-  opacity: .75;
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
-  -webkit-transition: all 60ms ease;
-  transition: all 60ms ease;
+.target-resize {
+  width: 65%;
+  margin-right: auto;
+  margin-left: auto;
 }

@@ -16,9 +16,24 @@ body {
 }
 
 p {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .page-header {
   font-family: 'Petit Formal Script', cursive;
+}
+
+.img-clickable:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 60ms ease;
+  transition: all 60ms ease;
+}
+
+.img-clickable:active {
+  opacity: .75;
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: all 60ms ease;
+  transition: all 60ms ease;
 }
