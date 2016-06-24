@@ -11,7 +11,7 @@
 
 {% block page_content %}
   <div class="row center-flex">
-    <div class="col-sm-4 col-xs-4">
+    <div class="col-xs-6 col-sm-3">
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title mdl-card--expand">
           <h2 class="mdl-card__title-text">Total Attending</h2>
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4 col-xs-4">
+    <div class="col-xs-6 col-sm-3">
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title mdl-card--expand red">
           <h2 class="mdl-card__title-text">Total Not Attending</h2>
@@ -31,7 +31,17 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4 col-xs-4">
+    <div class="col-xs-6 col-sm-3 top">
+      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title mdl-card--expand grey">
+          <h2 class="mdl-card__title-text">Awaiting Response</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <h2>{{ awaiting_response }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 top">
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title mdl-card--expand blue">
           <h2 class="mdl-card__title-text">RSVP Days Remaining</h2>

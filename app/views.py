@@ -259,11 +259,14 @@ def rsvp_admin():
     total_attending = len(total_attending)
     total_not_attending = models.Guests.query.filter_by(attending=False).all()
     total_not_attending = len(total_not_attending)
+    awaiting_response = models.Guests.query.filter_by(attending=None).all()
+    awaiting_response = len(awaiting_response)
     return render_template('rsvp-admin.html', 
                            party=party, 
                            guests=guests, 
                            total_attending=total_attending,
                            total_not_attending=total_not_attending, 
+                           awaiting_response=awaiting_response,
                            days_until_rsvp=days_until_rsvp, 
                            bernardus=bernardus_guests, 
                            blue_sky_lodge=blue_sky_guests, 
