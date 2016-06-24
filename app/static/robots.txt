@@ -1,1 +1,2 @@
 Sitemap: http://www.kirinandchris.com/sitemap.xml
+Disallow: /rsvp-admin.html
