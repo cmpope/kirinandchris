@@ -21,7 +21,12 @@
 
 .demo-card-square > .blue {
   color: #fff;
-  background: blue;
+  background: #2196F3;
+}
+
+.demo-card-square > .red {
+  color: #fff;
+  background: #F44336;
 }
 
 .search-spacing {
@@ -53,6 +58,16 @@
 #accommodationChart {
   height: 24em;
   width: 100%;
+}
+
+@media (max-width: 425px) {
+  .demo-card-square.mdl-card {
+    width: 5em;
+  }
+
+  .mdl-card__title-text {
+    font-size: 10px;
+  }
 }
 
 @media (min-width: 768px) {
