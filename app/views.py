@@ -153,9 +153,7 @@ def rsvp_update_guest():
             }   
             """ % (g.first_name, g.last_name, g.email, g.attending, g.dietary_restrictions)
             p = json.loads(payload)
-            print type(payload)
             r = requests.post(url , json=p)
-            print r.text
     return redirect('/rsvp')
 
 @app.route('/rsvp/update/party', methods=['POST'])
