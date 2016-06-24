@@ -6,6 +6,10 @@ img {
   margin: 10px;
 }
 
+p {
+  font-size: 18px;
+}
+
 .row {
   margin-bottom: 2em;
 }

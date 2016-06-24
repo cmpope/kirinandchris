@@ -2,6 +2,7 @@ from flask import render_template, request, session, flash, redirect, url_for, R
 from app import app, models, db
 from forms import AddressForm
 from datetime import date
+import requests, json
 import sendgrid
 import os
 from sendgrid.helpers.mail import *
@@ -112,6 +113,49 @@ def rsvp_update_guest():
             g.dietary_restrictions = x['dietary_restrictions']
             db.session.add(g)
             db.session.commit()
+            url = "https://hooks.slack.com/services/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"
+            payload = """
+            {
+               "attachments":[
+                  {
+                     "fallback":"Go to RSVP Admin: <http://kirinandchris.com/rsvp/admin>",
+                     "pretext":"Go to RSVP Admin: <http://kirinandchris.com/rsvp/admin>",
+                     "color":"#68c3a3",
+                     "fields":[
+                        {
+                           "title":"First",
+                           "value":"%s",
+                           "short":true
+                        },
+                        {
+                            "title":"Last",
+                            "value":"%s",
+                            "short":true
+                        },
+                        {
+                            "title":"Email",
+                            "value":"%s",
+                            "short":true
+                        },
+                        {
+                            "title":"Attending",
+                            "value":"%s",
+                            "short":true
+                        },
+                        {
+                            "title":"Dietary Restrictions",
+                            "value":"%s",
+                            "short":true
+                        }
+                     ]
+                  }
+               ]
+            }   
+            """ % (g.first_name, g.last_name, g.email, g.attending, g.dietary_restrictions)
+            p = json.loads(payload)
+            print type(payload)
+            r = requests.post(url , json=p)
+            print r.text
     return redirect('/rsvp')
 
 @app.route('/rsvp/update/party', methods=['POST'])
