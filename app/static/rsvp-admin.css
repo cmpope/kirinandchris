@@ -39,6 +39,10 @@
   background: #607D8B;
 }
 
+.mdl-textfield {
+  width: 15em;
+}
+
 .search-spacing {
   margin-top: 3em;
 }
