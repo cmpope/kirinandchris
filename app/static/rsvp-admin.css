@@ -3,6 +3,11 @@
   margin-right: auto;
 }
 
+.center-flex {
+  display: flex
+  justify-content: center;
+}
+
 .nav-margin-top {
   margin-top: 5em;
 }
