@@ -38,7 +38,7 @@ a {
 }
 .the-wedding-card-square > .mdl-card__title {
   color: #fff;
-  background: url('/static/the-wedding-card.jpg') center / cover;
+  background: url('/static/the_wedding_card.jpg') center / cover;
 }
 
 
