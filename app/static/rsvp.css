@@ -58,7 +58,64 @@ h1 {
   justify-content: center;
 }
 
-.toggle-ctn {
+input[type="radio"] {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+}
+
+.toggle-container {
+  width: 8em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+.attending-btn {
+  background-color: #c3c3c3;
+  border-color: #ababa4;
+  background: #c3c3c3;
+}
+
+.yes-btn:hover, .yes-btn.active, .yes-btn.active:hover {
+  background-color: #68c3a3;
+  background: #68c3a3;
+}
+
+.no-btn:hover, .no-btn.active, .no-btn.active:hover {
+  background-color: #E57373;
+  background: #E57373;
+}
+
+.rsvp-button {
+  font-family: tisa sans;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+  width: 50%;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-yes:hover {
+  background-color: #68c3a3;
+  /*opacity: 0.8;*/
+  color: white;
+}
+
+.btn-yes:active {
+  background-color: #68c3a3;
+}
+
+.btn-yes:focus {
+  background-color: #68c3a3;
+}
+
+.btn-no {
 
 }
 
@@ -126,6 +183,8 @@ p, h6, h5, th, td, .name, .save-submit, .selectpicker, .btn-group, .dropdown-men
 .extra-margin {
   margin-top: 2em;
 }
+
+
 
 @media (min-width: 768px) {
   .nav-margin-top {

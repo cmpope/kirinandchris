@@ -79,7 +79,23 @@
                 <td class="toggle-ctn">
                   <div class="toggle-container">
                     <div class="toggle-center">
-                      <input gid="{{ item.id }}" gfield="attending" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" {% if item.attending %} checked {% endif %}>
+                      <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary attending-btn yes-btn {% if item.attending is equalto true %} active {% endif %}">
+                          <input gid="{{ item.id }}" gfield="attending" type="radio" name="{{ item.id }}-attending-btns" id="option1" autocomplete="off" value="true"> Yes
+                        </label>
+                        <label class="btn btn-primary attending-btn no-btn {% if item.attending is equalto false %} active {% endif %}">
+                          <input gid="{{ item.id }}" gfield="attending" type="radio" name="{{ item.id }}-attending-btns" id="option2" autocomplete="off" value="false"> No
+                        </label>
+                      </div>
+{#                       <div class="btn-group attending-btns" role="group" aria-label="...">
+                        <label class="rsvp-button" for="guest-{{ item.id }}-yes">
+                          <input type="radio" id="guest-{{ item.id }}-yes" name="guest-{{ item.id }}-accept" value="true">
+                          Yes
+                        </label>
+                        <input type="radio" id="guest-{{ item.id }}-no" name="guest-{{ item.id }}-accept">
+                        <label class="rsvp-button" for="guest-{{ item.id }}-no" value="false">No</label>
+                      </div> #}
+                      {# <input gid="{{ item.id }}" gfield="attending" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" {% if item.attending %} checked {% endif %}> #}
                     </div>
                   </div>
                 </td>

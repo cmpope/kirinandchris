@@ -5,6 +5,10 @@ $(document).ready(function() {
     $('#addressLookup').submit();
   });
 
+  $('.attending-btns input').click(function(){
+    $(this).attr('checked');
+  });
+
   $('.mdl-switch').click(function(){
     id = $(this).attr('for');
     check = ($('#' + id).val());
@@ -27,10 +31,9 @@ $(document).ready(function() {
       guestData['gid'] = gid;
       var emailSelector = '[gid="' + gid + '\"] [gfield="email"]';
       var emailUpdate = $(emailSelector).val();
-      console.log('emailUpdate :', emailUpdate);
       guestData['email'] = emailUpdate;
-      var attendingSelector = '[gid="' + gid + '\"] [gfield="attending"]';
-      var attendingUpdate = $(attendingSelector).is(":checked"); 
+      var attendingSelector = 'input:radio[name="' + gid + '-attending-btns\"]:checked';
+      var attendingUpdate = $(attendingSelector).val();
       guestData['attending'] = attendingUpdate;
       var dietarySelector = '[gid="' + gid + '\"] [gfield="dietary_restrictions"]';
       var dietaryUpdate = $(dietarySelector).val();
