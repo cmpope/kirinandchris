@@ -5,10 +5,6 @@ $(document).ready(function() {
     $('#addressLookup').submit();
   });
 
-  $('.attending-btns input').click(function(){
-    $(this).attr('checked');
-  });
-
   $('.mdl-switch').click(function(){
     id = $(this).attr('for');
     check = ($('#' + id).val());
