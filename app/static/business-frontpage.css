@@ -163,6 +163,10 @@ a:hover {
     margin-bottom: 30px;
 }
 
+.transportation-table {
+    margin-top: 1em;
+}
+
 
 
 @media (max-width: 992px) {
